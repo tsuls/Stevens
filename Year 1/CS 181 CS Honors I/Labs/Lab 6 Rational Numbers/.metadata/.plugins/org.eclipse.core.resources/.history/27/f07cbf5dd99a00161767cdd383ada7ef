@@ -1,0 +1,158 @@
+package Lab6;
+
+public class Rational implements Comparable<Rational>
+{
+	private long numerator;
+	private long denominator;
+
+	public final static String NAME = "Tyler Sulsenti";
+
+	public Rational() 
+	{
+		numerator = 0;
+		denominator = 1;
+	}
+
+	public Rational(long wholeNum)
+	{
+		numerator = wholeNum;
+		denominator = 1;
+	}
+
+	public Rational(long num, long denom)
+	{
+		numerator = num;
+		denominator = denom;
+	}
+
+	public long getDenominator() 
+	{
+		return denominator;
+	}
+
+	public long getNumerator() 
+	{
+
+		return numerator;
+	}
+
+	public String toString()
+	{
+		return numerator + "/" + denominator;
+	}
+	
+	private void reduceTerms()
+	{
+		long gcd = computeGCD(numerator,denominator);
+		numerator = numerator/gcd;
+		denominator = denominator/gcd;
+	}
+	
+	private long computeGCD(long x, long y)
+	{
+		long gcd;
+		x = Math.abs(x);
+		y = Math.abs(y);
+		
+		if(x < y)
+		{
+			gcd = computeGCD(y,x);
+		}
+		else
+		{
+			while(y > 0)
+			{
+				long z = y;
+				y = x % y;
+				x = z;
+			}
+			gcd = x;
+		}
+		return gcd;	
+	}
+	
+
+	private long computeLCM(long x, long y)
+	{	
+		return Math.abs(x*y)/ computeGCD(x,y);		
+	}
+	
+	public Rational mul(long r)
+	{
+		return new Rational((numerator * r), denominator);
+	}
+	
+	public Rational div(long r)
+	{
+		return new Rational(numerator, (denominator * r));
+	}
+	
+	public Rational getInv()
+	{
+		return new Rational(denominator,numerator);
+	}
+	
+	public Rational add(Rational other)
+	{
+		long gcd = computeGCD(denominator, other.getDenominator());
+		long newNum1 = numerator * gcd;
+		long newNum2 = other.getNumerator() * gcd;
+		
+		return new Rational((newNum1 + newNum2) , gcd);
+	}
+	
+	public Rational sub(Rational other)
+	{
+		long gcd = computeGCD(denominator, other.getDenominator());
+		long newNum1 = numerator * gcd;
+		long newNum2 = other.getNumerator() * gcd;
+		
+		return new Rational((newNum1 - newNum2) , gcd);
+	}
+	
+	public Rational mul(Rational other)
+	{
+		return new Rational(other.getNumerator() * numerator, other.getDenominator()*denominator);
+	}
+	
+	public Rational div(Rational other)
+	{
+		return mul(other.getInv());
+	}
+	
+	public int compareTo(Rational other)
+	{
+		if(this.doubleValue() > other.doubleValue())
+		{
+			return 1;
+		}
+		else if(this.doubleValue() < other.doubleValue())
+		{
+			return -1;
+		}	
+		else
+		{
+			return 0;
+		}
+	}
+
+	public double doubleValue() 
+	{
+		return numerator/denominator;
+	}
+	
+	public int intValue()
+	{
+		return (int) (numerator/denominator);
+	}
+	
+	public long longValue()
+	{
+		return (long) (numerator/denominator);
+	}
+	
+	public float floatValue()
+	{
+		return (float) (numerator/denominator);
+	}
+}

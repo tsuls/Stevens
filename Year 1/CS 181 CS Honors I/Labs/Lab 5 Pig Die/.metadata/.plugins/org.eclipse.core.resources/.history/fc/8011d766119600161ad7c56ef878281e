@@ -1,0 +1,47 @@
+package Stevens.CS181.Lab5;
+
+public class Tester 
+{
+
+	public static void main(String[] args)
+	{
+		Die d = new Die();
+		int count = 0;
+		int choice = 0;
+		boolean one = false;
+		boolean GameOver = false;
+	
+	
+	
+		while(!GameOver)
+		{
+			for(int i = 0; i < 20; i++)
+			{
+				int roll = d.roll();
+				while(roll == 1 && one == true)
+				{
+					roll = d.roll();
+				}
+				if(roll == 1 && one == false)
+				{
+					one = true;
+				}
+				if(i%10 == 0 && i != 0)
+				{
+					one = false;
+					System.out.print("TEN ");
+				}
+				System.out.print(roll + " ");
+				
+		
+			}
+			count++;
+			System.out.println();
+			if(count == 10)
+			{
+				GameOver = true;
+			}
+		}
+	}
+	
+}

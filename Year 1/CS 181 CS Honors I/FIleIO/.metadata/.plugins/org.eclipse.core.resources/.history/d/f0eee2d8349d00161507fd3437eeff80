@@ -1,0 +1,15 @@
+
+public class SchoolInfo 
+{
+	private String schoolID, schoolName, schoolCity, schoolState;schoolCountry;
+	
+	public SchoolInfo(String id, String name, String city, String state, String country)
+	{
+		schoolID = id;
+		schoolName = name;
+		schoolCity = city;
+		schoolState = state;
+		schoolCountry = country;
+	}
+	
+}

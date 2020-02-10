@@ -1,0 +1,86 @@
+package Stevens.CS181.Lab5;
+
+public class Die_C  extends Die
+{
+
+    public static final int MAX = 6;
+
+    private int faceValue;
+    private static int rollOne;
+
+    //empty constructor, initial value 1
+    public Die_C() 
+    { 
+    	faceValue = 1;
+    	rollOne = 0;
+    }
+    
+    /**
+     * Rolls the fixed die. Ensures that every 10 rolls will be at least and at most one 1
+     * 
+     * @param	count the current roll count, 1-10
+     * 
+     */
+    public int roll(int count) 
+    {
+    	//Determine which roll will be a one
+    	if(count == 1) //Only perform this action once every 10 rolls;
+    	{
+    		rollOne = (int)(Math.random() * 10) + 1;
+    	}
+
+    	if(count == rollOne) //are we at the roll where 1 will be rolled?
+    	{
+    		faceValue = 1;
+    	}
+    	
+    	
+    	 if(count != rollOne) //if not
+    	{
+    		
+    		do
+    		{
+    			faceValue = (int)(Math.random () * MAX) +1;
+    		}while(faceValue == 1); //Don't generate a 1
+    	}
+    	return faceValue;
+    }
+    
+
+    /**
+     * Sets the Face Value of the die
+     * 
+     * @param	faceValue, current faceValue
+     * 
+     */
+    public void setFaceValue(int faceValue)
+    {
+    	if (faceValue > 0 && faceValue <= MAX)
+    	{
+    		this.faceValue = faceValue;
+    	}
+    }
+
+    /**
+     * gets the current face value
+     * 
+     * @return	 the current face value
+     * 
+     */
+    public int getFaceValue() 
+    { 
+    	return faceValue; 
+    }
+
+    
+    /**
+     * returns a String representation of the object
+     * 
+     * @param	a String representation of the object
+     * 
+     */
+    public String toString()
+    {   
+    	return Integer.toString(faceValue); 
+    }
+}

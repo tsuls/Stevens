@@ -1,0 +1,93 @@
+package Lab9;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Boggle 
+{
+	static ArrayList<String> boggleWords = new ArrayList<String>();
+
+	public static void findWords(String initial, String substring) throws IOException
+	{
+		String nextLine;
+		FileReader fileReader = new FileReader("dict.txt");
+		BufferedReader bufferedReader = new BufferedReader(fileReader);
+		
+		ArrayList<String> x = new ArrayList<String>();
+		while ((nextLine = bufferedReader.readLine()) != null) 
+		{
+		  x.add(nextLine);
+		}
+
+		String[] dict = listToArray(x);
+	
+		
+		ArrayList<String> permutations = new ArrayList<String>();
+		ya(initial,substring,permutations);
+		String[] toTest = listToArray(permutations);
+		
+	for(int i = 0; i < toTest.length; i++)
+	{
+		System.out.println(toTest[i]);
+	}
+		
+		for(int i = 0; i < toTest.length; i++)
+		{
+			if(Arrays.binarySearch(dict, toTest[i]) >= 0)
+			{
+				System.out.println("ADDED: " + toTest[i]);
+				boggleWords.add(toTest[i]);
+			}
+		}
+	
+		bufferedReader.close();		
+	}
+	
+	private static void ya(String s, String sub, ArrayList<String> fucks)
+	{
+		fucks.add(sub);
+		if(s.length() > 0)
+		{
+			
+		}
+		else
+		{
+			ya(s.substring(1), s.substring(0,1) + sub, fucks);
+			ya(s.substring(1), sub, fucks);	
+		}
+	}
+	
+	private static String[] listToArray(ArrayList<String> x)
+	{
+		String[] y = new String[x.size()];
+		for(int i = 0; i < x.size(); i++)
+		{
+			y[i] = x.get(i);
+		}
+		return y;
+	}
+	
+	public ArrayList<String> getBoggleWords() throws FileNotFoundException
+	{
+		return null;
+	}
+	
+	public static void main (String[] args)
+	{
+		long start = System.nanoTime();
+		try {
+			findWords("MTENLFEIOEREOHWR","");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		long totalTime = System.nanoTime() - start;
+		System.out.println("Time: " + totalTime);
+	}
+}

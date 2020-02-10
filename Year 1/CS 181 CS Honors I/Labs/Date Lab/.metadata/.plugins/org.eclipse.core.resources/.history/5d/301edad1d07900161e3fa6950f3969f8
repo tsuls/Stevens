@@ -1,0 +1,262 @@
+/*
+ * Lab02_TylerSulsenti.java
+ *
+ * I Pledge my Honor that i have abided by the Stevens Honor System
+ * Tyler Sulsenti
+ *
+ */
+
+package Lab2;
+
+/**
+ * ENTER A BRIEF DESCRIPTION OF WHAT YOUR PROGRAM DOES HERE
+ *
+ * IN THE LINES BELOW, FILL IN FIELDS WITH APPROPRIATE RESPONSES. DELETE THIS LINE.
+ * @author NAME
+ * @version 1.0
+ * @since YYYYMMDD
+ * 
+ */
+
+/*
+ * Your program can only have ONE class
+ * Change the class declaration line to add_YOURNAME after Lab02.
+ * IMPORTANT: THE DECLARATION LINE MUST BE public class Lab02_yourname{
+ * MAKE SURE YOU KEEP THE BRACKET ON THE SAME LINE AS THE CLASS DECLARATION!!
+ * You may delete this comment block after you read it.
+ */
+public class Lab02_TylerSulsenti
+{
+    
+    public static final String NAME = "Tyler Sulsenti";
+
+    /**
+     * Given a string, in the format of yyyymmdd, extracts the day of the 
+     * week the date falls on
+     *
+     * @param s  the string, in the format of yyyymmdd to be processed
+     * @return   the day of the week, as a String
+     */
+    public static String getDay(String s)
+    {
+    	int w, d = 0, m = 0, y = 0;
+    	int yyyy = Integer.parseInt(s.substring(0,4));
+    	int mm = Integer.parseInt(s.substring(4,6)); 
+    	int dd = Integer.parseInt(s.substring(6));
+    	 	
+    	if(mm >= 3 && mm <= 12)
+    	{
+    		d = dd;
+    		m = mm;
+    		y = yyyy;  		
+    	}
+    	else if(mm >= 1 && mm <= 2)
+    	{
+    		d = dd;
+    		m = mm + 12;
+    		y = yyyy - 1;
+    	}
+    	
+    	w = (d - 1 + ((13*(m+1))/5) + y + (y/4) - (y/100) + (y/400)) % 7;
+    	switch(w)
+    	{
+    		case 0: return "Sunday";
+    		
+    		case 1: return "Monday";
+    		
+    		case 2: return "Tuesday";
+    		
+    		case 3: return "Wednesday";
+    		
+    		case 4: return "Thursday";
+    		
+    		case 5: return "Friday";
+    		
+    		case 6: return "Saturday";
+    	}
+		return null;
+    }
+
+   /**
+    * Given a string date and a number, computes the day of the week n days 
+    * after (or before) the date given
+    *
+    * @param s  the string, in the format of yyyymmdd to be processed
+    * @param n  the number of days after (or before if negative) 
+    *           the specified date
+    * @return   the new date,as a String in yyyymmdd format
+    */
+    public static String newDate(String s, int n)
+    {
+    	String yyyy = s.substring(0,4);
+    	String mm = s.substring(4,6); 
+    	String dd = s.substring(6);
+    	int maxDays = getMaxDays(Integer.parseInt(mm), Integer.parseInt(yyyy));
+    	int maxMonths = 12;
+    	
+    	if(Integer.parseInt(dd) + n <= maxDays)
+    	{
+    		if(mm.length() == 1)
+        	{
+        		mm = "0" + mm;
+        	}
+        	if(dd.length() == 1)
+        	{
+        		dd = "0" + dd;
+        	}
+    		
+    		return yyyy + mm + (Integer.parseInt(dd) + n);
+    	}
+    	else
+    	{
+    		while(n > 0)
+    		{
+    			if(Integer.parseInt(dd) == maxDays) // Checks to see if going into next month
+    			{
+    				dd = "01";
+    				
+    				if(Integer.parseInt(mm) + 1 > maxMonths) // Checks to see if going into next year
+    				{
+    					mm = "01";
+    					yyyy = "" + (Integer.parseInt(yyyy) + 1);
+    				}
+    				else
+    				{
+    					mm = "" + (Integer.parseInt(mm) + 1);
+    				}
+    				
+    				n--;
+    			}
+    			else
+    			{
+    				dd = "" + (Integer.parseInt(dd) + 1);
+    				n--;
+    			}
+    		}   		
+    	}
+    	
+    	if(mm.length() == 1)
+    	{
+    		mm = "0" + mm;
+    	}
+    	if(dd.length() == 1)
+    	{
+    		dd = "0" + dd;
+    	}
+    	return yyyy + mm + dd;
+    }
+
+   /**
+    * Given two dates, computes the number of days inbetween them.
+    *
+    * @param start  the start date, in the format of yyyymmdd 
+    * @param end    the end date
+    * @return       the number of days between the two dates
+    */
+    public static int daysBetween(String start, String end)
+     {
+    	String yyyyS = start.substring(0,4);
+    	String mmS = start.substring(4,6); 
+    	String ddS = start.substring(6);
+    	
+    	String yyyyE = end.substring(0,4);
+    	String mmE = end.substring(4,6); 
+    	String ddE = end.substring(6);
+    	
+    	
+    	int ans = 0;
+    	
+    	
+    	if(mmS.equals(mmE))
+    	{
+    		ans = Integer.parseInt(ddS) - Integer.parseInt(ddE);
+    		if(ans < 0)
+    		{
+    			ans = Math.abs(ans);
+    		}
+    		return ans;
+    	}
+    	
+    	while(start.equals(end) == false)
+    	{
+    		if(ddS.equals("1")) //Check for previous month
+    		{
+    			ddS = "31";
+    			if(Integer.parseInt(mmS) - 1 <= 0) //Check for prevois year
+    			{
+    				mmS = "12";
+    				yyyyS = "" + (Integer.parseInt(yyyyS) - 1);
+    			}
+    			else
+    			{
+    				mmS = "" + (Integer.parseInt(mmS) - 1);
+    			}
+    			ans++;
+    		}
+    		else
+    		{
+    			ddS = "" + (Integer.parseInt(ddS) - 1);
+    			ans++;
+    		}
+    		start = yyyyS+mmS+ddS;
+    	}
+		return ans;
+    }
+    public static int getMaxDays(int mm, int yyyy)
+    {
+    	int maxDays = 0;
+    	switch(mm)
+    	{
+    		case 1: maxDays = 31;
+    				break;
+    			
+    		case 2: if(yyyy % 4 == 0 && yyyy % 100 != 0 || yyyy % 400 == 0)
+    				{
+    					maxDays = 29;
+    				}
+    				else
+    				{
+    					maxDays = 28;
+    				}	
+    				break;
+    				
+    		case 3: maxDays = 31;
+    				break;
+    				
+    		case 4: maxDays = 30;
+    				break;
+    		
+    		case 5: maxDays = 31;
+    				break;
+    				
+    		case 6: maxDays = 30;
+    				break;
+    				
+    		case 7: maxDays = 31;
+    				break;
+    				
+    		case 8: maxDays = 31;
+    				break;
+    				
+    		case 9: maxDays = 30;
+    				break;
+    				
+    		case 10: maxDays = 31;
+    				 break;
+    				 
+    		case 11: maxDays = 30;
+    				 break;
+    				 
+    		case 12: maxDays = 31;
+    			     break; 		
+    	}
+    	return maxDays;
+    }
+    public static void main(String[] args)
+    {
+    	//System.out.println("The Day of the week for the Date inputed is " + getDay("20160929"));
+    	//System.out.println("The new Date is: " + newDate("20160929", 10));
+    	System.out.println("Number of Days in between: " + daysBetween("20161020", "20160910"));    	
+    }
+    
+}

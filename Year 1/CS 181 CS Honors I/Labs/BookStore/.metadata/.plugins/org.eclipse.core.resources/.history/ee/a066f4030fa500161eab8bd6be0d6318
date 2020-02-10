@@ -1,0 +1,35 @@
+package bookstore;
+
+public class HardcoverBook extends Book 
+{
+	private String coverMaterial;
+	
+	public HardcoverBook(String t, String a, int c, String cm) 
+	{
+		super(t, a, c, Medium.Hardcover);
+		coverMaterial = cm;
+	}
+	
+	public String getCoverMaterial()
+	{
+		return coverMaterial;
+	}
+	
+	public String getMedium()
+	{
+		return super.getMedium() + " " + coverMaterial;
+	}
+	
+	public boolean isForSale()
+	{
+		return true;
+	}
+	
+	public String toString()
+	{
+		return super.toString() + "{" + coverMaterial + "}";
+	}
+	
+	
+
+}

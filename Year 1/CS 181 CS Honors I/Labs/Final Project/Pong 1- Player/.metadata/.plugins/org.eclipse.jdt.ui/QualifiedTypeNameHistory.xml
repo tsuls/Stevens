@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="javax.swing.text.Document"/>
+<fullyQualifiedTypeName name="javax.swing.text.PlainDocument"/>
+<fullyQualifiedTypeName name="javax.print.attribute.AttributeSet"/>
+<fullyQualifiedTypeName name="javax.swing.text.BadLocationException"/>
+<fullyQualifiedTypeName name="javax.swing.JTextField"/>
+<fullyQualifiedTypeName name="javax.swing.JLabel"/>
+<fullyQualifiedTypeName name="javax.swing.Icon"/>
+<fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
+</qualifiedTypeNameHistroy>

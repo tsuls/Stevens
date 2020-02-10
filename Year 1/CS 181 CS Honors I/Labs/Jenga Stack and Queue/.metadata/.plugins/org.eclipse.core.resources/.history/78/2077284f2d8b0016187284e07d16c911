@@ -1,0 +1,90 @@
+/*
+ * StacksFromQueues.java
+ *
+ * I Pledge my honor that i have abided by the Stevens Honor System.
+ * Tyler Sulsenti
+ *
+ */
+
+package Lab4;
+
+/**
+ * Creates a Stack with Two Queues, no direct use of Arrays
+ *
+ * @author Tyler Sulsenti
+ * @version 1.0
+ * @since 2016/10/05
+ * 
+ *
+import java.util.EmptyStackException;
+
+public class StackFromQueues 
+{
+	protected static final String NAME = "Tyler Sulsenti";
+	Queue qData;
+	Queue qScratch;
+	
+	public StackFromQueues()
+	{
+		qData = new Queue();
+		qScratch = new Queue();
+	}
+	public StackFromQueues(int[] a)
+	{
+		qData = new Queue(a);
+		qScratch = new Queue();
+	}
+	
+	public int size()
+	{
+		return qData.size();
+	}
+	
+	public void push(int toPush)
+	{
+		clearQueue(qScratch);
+		
+		qScratch.enqueue(toPush);
+		
+		int qDLen = qData.size();
+		for(int i = 0; i < qDLen; i++)
+		{
+			qScratch.enqueue(qData.dequeue());
+		}
+		
+		int qSLen = qScratch.size();
+		for(int i = 0; i < qSLen; i++)
+		{
+			qData.enqueue(qScratch.dequeue());
+		}
+	}
+	
+	public int pop()
+	{
+		empty();
+		return qData.dequeue();
+	}
+	
+	public boolean empty()
+	{
+		if(qData.size() == 0)
+		{
+			throw new EmptyStackException();
+		}
+		return false;
+	}
+	
+	public int peek()
+	{
+		empty();
+		return qData.peek();
+	}
+	
+	public void clearQueue(Queue toClear)
+	{
+		for(int i = 0; i < toClear.size(); i++)
+		{
+			toClear.dequeue();
+		}
+	}
+}

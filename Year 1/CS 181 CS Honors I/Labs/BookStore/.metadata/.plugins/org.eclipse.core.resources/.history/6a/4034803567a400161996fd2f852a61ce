@@ -1,0 +1,6 @@
+import Book;
+
+public class ElectronicBook extends Book 
+{
+
+}

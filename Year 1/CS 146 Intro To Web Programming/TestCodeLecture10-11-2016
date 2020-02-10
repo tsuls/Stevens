@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+    </head>
+    
+    <body>
+        <nav>
+            <a href="/html/">HTML</a>
+        </nav>
+            <details>
+                <summary>Copyright 1999-2014</summary>
+            <p>- by Herc Inc. All rights Reserved</p>
+            <p>All content and graphics on this web page are the property of the compnay Herc Inc.</p></details>
+        <p>Display a gauge:</p>
+        <meter value="2" min="0" max="10"> 2 out of 10</meter><br>
+        <meter value="0.6"> 60%</meter>
+           
+       
+    </body>
+    
+</html>
+
+
+

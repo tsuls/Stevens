@@ -1,0 +1,93 @@
+package Lab6;
+
+public class Rational 
+{
+	private long numerator;
+	private long denominator;
+
+	public final String NAME = "Tyler Sulsenti";
+
+	public Rational() 
+	{
+		numerator = 0;
+		denominator = 1;
+	}
+
+	public Rational(long wholeNum)
+	{
+		numerator = wholeNum;
+		denominator = 1;
+	}
+
+	public Rational(long num, long denom)
+	{
+		numerator = num;
+		denominator = denom;
+	}
+
+	public long getDenominator() 
+	{
+		return denominator;
+	}
+
+	public long getNumerator() 
+	{
+
+		return numerator;
+	}
+
+	public String toString()
+	{
+		
+	}
+	
+	private void reduceTerms()
+	{
+		
+	}
+	
+	private long computeGCD()
+	{
+		
+	}
+	
+
+	private long computeLCM()
+	{
+		
+	}
+	
+	public Rational mul(long r)
+	{
+		return new Rational((numerator * r), denominator);
+	}
+	
+	public Rational div(long r)
+	{
+		return new Rational(numerator, (denominator * r));
+	}
+	
+	public Rational getInv()
+	{
+		return new Rational(denominator,numerator);
+	}
+	
+	public Rational add(Rational other)
+	{
+		
+	}
+	
+	public Rational sub(Rational other)
+	{
+		
+	}
+	
+	public Rational mul(Rational other)
+	{
+		
+	}
+	public Rational div(Rational other)
+	{
+		
+	}
+}

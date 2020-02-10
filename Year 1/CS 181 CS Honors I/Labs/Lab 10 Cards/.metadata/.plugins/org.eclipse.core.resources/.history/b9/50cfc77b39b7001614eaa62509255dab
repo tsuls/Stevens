@@ -1,0 +1,248 @@
+//File   : GUI-lowlevel/cards1/cards/CardTable.java
+//Purpose: This is just a JComponent for drawing the cards that are
+//       showing on the table.
+//
+//Author : Fred Swartz - February 19, 2007 - Placed in public domain.
+//
+//Enhancements:
+//     * Use model. Currently, it is initialized with a whole deck of cards,
+//       but instead it should be intialized with a "model" which
+//       it should interrogate (calling model methods) to find out what
+//       should be displayed.
+//     * Similarly, actions by the mouse might be used to set things in the
+//       model, Perhaps by where it's dragged to, or double-clicked, or
+//       with pop-up menu, or ...
+
+package Lab10;
+
+import java.awt.*;
+import java.awt.event.*;
+import java.util.ArrayList;
+
+import javax.swing.*;
+
+//////////////////////////////////////////////////////////////////////CardTable
+public class CardTable extends JComponent implements MouseListener,
+     MouseMotionListener {
+ 
+ //================================================================ constants
+ private static final Color BACKGROUND_COLOR = Color.GREEN;
+ private static final int   TABLE_WIDTH       = 800;    // Pixels.
+ private static final int   TABLE_HEIGHT      = 400;    // Pixels.
+ 
+ //=================================================================== fields
+ //... Initial image coords.
+ private int _initX     = 0;   // x coord - set from drag
+ private int _initY     = 0;   // y coord - set from drag
+ 
+ //... Position in image of mouse press to make dragging look better.
+ private int _dragFromX = 0;  // Displacement inside image of mouse press.
+ private int _dragFromY = 0;
+ 
+ private Card[] _deck;  // Should really be in a model, but ...
+ private final Card[] initDeck;
+
+ private Card   _currentCard = null; // Current selected card.
+ 
+ String tempCard = "";
+ 
+ //private JButton resetButton;
+ 
+ //============================================================== constructor
+ public CardTable(Card[] deck) 
+ {
+     _deck = deck;  // Should be passed a model.
+     initDeck = loadDeck(deck);
+     
+     //... Initialize graphics
+     setPreferredSize(new Dimension(TABLE_WIDTH, TABLE_HEIGHT));
+     setBackground(Color.blue);
+     
+     //... Add mouse listeners.
+     addMouseListener(this);
+     addMouseMotionListener(this);
+     
+   /*  resetButton = new JButton("Reset");
+     resetButton.addActionListener(actionListenerButton);
+     resetButton.setBounds(400,400,200,200);
+     this.add(resetButton);*/
+     
+    
+ }
+ 
+ //=========================================================== paintComponent
+ @Override
+ public void paintComponent(Graphics g) 
+ {
+	 super.paintComponent(g);
+     //... Paint background
+     int width = getWidth();
+     int height = getHeight();
+     g.setColor(BACKGROUND_COLOR);
+     g.fillRect(0, 0, width, height);
+     
+     //... Display the cards, starting with the first array element.
+     //    The array order defines the z-axis depth.
+     for (Card c : _deck) 
+     {
+        if (null != c)  
+        	c.draw(g, this);
+     }
+ }
+ 
+ //====================================================== method mousePressed
+ // Check to see if press is within any card.
+ // If it is,
+ // * Set _currentCard so mouseDragged knows what to drag.
+ // * Record where in the image (relative to the upper left coordinates)
+ //   the mouse was clicked, because it looks best if we drag from there.
+ // TODO: Move the card to the last position so that it displays on top.
+ public void mousePressed(MouseEvent e)
+ {
+     int x = e.getX();   // Save the x coord of the click
+     int y = e.getY();  // Save the y coord of the click
+     
+     //... Find card image this is in.  Check from top down.
+     _currentCard = null;  // Assume not in any image.
+  
+     for (int crd=_deck.length-1; crd>=0; crd--) 
+     {
+         Card testCard = _deck[crd];
+       
+         if ((null != testCard) && (testCard.contains(x, y))) 
+         {
+             //... Found, remember this card for dragging.
+             _dragFromX = x - testCard.getX();  // how far from left
+             _dragFromY = y - testCard.getY();  // how far from top
+             _currentCard = testCard; // Remember what we're dragging.
+             
+             shift(_deck,getIndex(_deck, _currentCard)); //Place current card on top
+             
+             if (e.getClickCount() == 2) 
+             {
+            	 _currentCard.flip();
+             }
+             
+             break;        // Stop when we find the first match.
+         }
+     }
+     this.repaint(); //bc we changed card
+ }
+ 
+ //============================================================= mouseDragged
+ // Set x,y to mouse position and repaint.
+ public void mouseDragged(MouseEvent e) 
+ {
+     if (_currentCard != null) {   // Non-null if pressed inside card image.
+         
+         int newX = e.getX() - _dragFromX;
+         int newY = e.getY() - _dragFromY;
+         
+         //--- Don't move the image off the screen sides
+         newX = Math.max(newX, 0);
+         newX = Math.min(newX, getWidth() - _currentCard.getWidth());
+         
+         //--- Don't move the image off top or bottom
+         newY = Math.max(newY, 0);
+         newY = Math.min(newY, getHeight() - _currentCard.getHeight());
+         
+         _currentCard.moveTo(newX, newY);
+         
+         this.repaint(); // Repaint because position changed.
+     }
+ }
+ 
+ //======================================================= method mouseExited
+ // Turn off dragging if mouse exits panel.
+ public void mouseExited(MouseEvent e) {
+	_currentCard = null;
+ }
+
+ public void mouseReleased(MouseEvent e) {
+	_currentCard = null;
+ }
+ 
+ //===============================================
+ /**
+  * Shifts the array of cards down to the current card and places the current card on top
+  * 
+  * @param c		the array of Cards
+  * @param index	the index to shift to
+  * @return			the shifted array
+  */
+ private Card[] shift(Card[] c, int index)//index of current card
+ {
+	Card newTop = c[index]; //Save the current Card
+	
+	
+	for(int i = index; i < c.length; i++) //Shift the rest down, to the current card
+	{
+		if(i + 1 < c.length)
+		{	
+			c[i] = c[i+1];
+		}
+	}
+	
+	c[c.length - 1] = newTop; //Place current card on top
+	
+	return c;
+ }
+ //===============================================
+ /**
+  * Gets the index of the given card in a given card array
+  * 
+  * @param c		The array to search
+  * @param cur		The card to search for
+  * @return			the index of the card in the array. -1 if the card is not in the array
+  */
+ private int getIndex(Card[] c, Card cur)
+ {
+	 for(int i = 0; i < c.length; i++)
+	 {
+		 if(c[i].equals(cur))
+		 {
+			 return i;
+		 }
+	 }
+	 return -1;
+ }
+//===============================================
+ /**
+  * Resets the cards on the card table to their initial positions and images
+  */
+ public void reset()
+ {
+	 for(int i = 0; i < _deck.length; i++)
+	 {
+		 _deck[i].reset();
+	 }
+	
+	 _deck = loadDeck(initDeck); //reset original position
+	this.repaint();
+ }
+//===============================================
+ /**
+  *Loads an array into a new array  
+  *
+  * @param a	the array to load into another
+  * @return		a new array reference, with the same values and size of the a parameter
+  */
+ private Card[] loadDeck(Card[] a)
+ {
+	 Card[]x = new Card[a.length];
+	 for(int i = 0; i < a.length; i ++)
+	 {
+		 x[i] = a[i];
+	 }
+	 return x;
+ }
+ //=============================================== Ignore other mouse events.
+ public void mouseMoved   (MouseEvent e) {}  // ignore these events
+ public void mouseEntered(MouseEvent e) {}  // ignore these events
+ public void mouseClicked(MouseEvent e) {}  // ignore these events
+ //===============================================
+ 
+
+
+
+}

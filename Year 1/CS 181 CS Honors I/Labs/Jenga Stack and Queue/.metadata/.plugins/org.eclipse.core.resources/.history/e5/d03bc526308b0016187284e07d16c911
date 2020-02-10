@@ -1,0 +1,91 @@
+package Lab4;
+
+import java.util.EmptyStackException;
+
+public class Stack
+{
+	protected static final String NAME = "Tyler Sulsenti";
+	private int[] arr;
+	
+	public Stack()
+	{
+		arr = new int[0];
+	}
+	
+	public Stack(int[] a)
+	{
+		arr = a;
+	}
+	
+	 /**
+     * Returns the current size of the Stack
+     * 
+     * @return   an int representing the current size of the Stack
+     */
+	public int size()
+	{
+		return arr.length;
+	}
+	
+	/**
+     * Pushes the input int on to the top of the stack
+     * 
+     * @param toPush	the int to push on to the top of the Stack
+     */
+	public void push(int toPush)
+	{
+		int[] temp = new int[size()+1];
+		temp[0] = toPush;
+		for(int i = 1; i < temp.length;i++)
+		{
+			temp[i] = arr[i-1];
+		}
+		arr = temp;
+	}
+	
+	 /**
+     * Removes the element from the top of the stack
+     * 
+     * @return   the element that was removed;
+     */
+	public int pop()
+	{
+		if(empty() != false)
+		{
+			return -1;
+		}
+		int[] temp = new int[size()-1];
+		int popVal = arr[0];
+		for(int i = 1; i < size(); i++)
+		{
+			temp[i-1] = arr[i];
+		}
+		arr = temp;
+		return popVal;
+	}
+	
+	/**
+     * Determines if the Stack is empty or not
+     * 
+     * @return   throws an EmptyStackException if the stack is Empty, returns false if it is not.
+     */
+	public boolean empty()
+	{
+		if(arr.length == 0)
+		{
+			throw new EmptyStackException();
+		}
+		return false;
+	}
+	
+	  /**
+     * Shows the element that is on the top of the stack
+     * 
+     * @return   the element on top of the stack
+     */
+	public int peek()
+	{
+		empty();
+		return arr[0];
+	}
+}

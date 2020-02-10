@@ -1,0 +1,33 @@
+package Lab9;
+
+public class Test 
+{
+	public static void permutation(String input)
+	{ 
+		permutation("", input); 
+	} 
+	
+	/* * Recursive method which actually prints all permutations * of given String, 
+	 * but since we are passing an empty String * as current permutation to start with, 
+	 * * I have made this method private and didn't exposed it to client. */ 
+	private static void permutation(String perm, String substring) 
+	{ 
+		if (substring.isEmpty()) 
+		{ 
+			System.out.println(perm + substring); 
+		} 
+		else 
+		{ 
+			for (int i = 0; i < substring.length(); i++) 
+			{ 
+				permutation(perm + substring.charAt(i), substring.substring(0, i) + substring.substring(i + 1, substring.length())); 
+			} 
+		} 
+	} 
+
+	public static void main(String args[]) 
+	{ 
+		permutation("123"); 
+	}
+}
+

@@ -1,0 +1,44 @@
+package bookstore;
+
+public abstract class Book 
+{
+	private String author;
+	private int cost;
+	private Medium medium;
+	private String title;
+	
+	public Book(String t, String a, int c, Medium m)
+	{
+		title = t; 
+		author = a;
+		cost = c;
+		medium = m;
+	}
+	
+	public String getAuthor()
+	{
+		return author;
+	}
+	
+	public double getCost()
+	{
+		return cost;
+	}
+	
+	public String getMedium
+	{
+		return medium;
+	}
+	
+	public String getTitle()
+	{
+		return title;
+	}
+	
+	public abstract boolean isForSale();
+	
+	public String toString
+	{
+		
+	}
+}

@@ -1,0 +1,18 @@
+package Lab4;
+
+public class TesterAF 
+{
+	public static void main(String[] FUCK)
+	{
+		int[] arr = {1,2,3};
+		Stack s = new Stack(arr);
+		System.out.println(s.empty());
+		s.pop();
+		s.pop();
+		System.out.println(s.empty());
+		s.pop();
+		//s.pop();
+		System.out.println(s.empty());
+		
+	}
+}

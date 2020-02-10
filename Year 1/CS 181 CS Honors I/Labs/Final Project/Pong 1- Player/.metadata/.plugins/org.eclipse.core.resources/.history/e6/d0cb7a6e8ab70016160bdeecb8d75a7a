@@ -1,0 +1,19 @@
+package breakout;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class Paddle extends GameRectangle
+{
+	public Paddle(int lX, int lY, int width, int height, Color c)
+	{
+		super(lX,lY,width,height, c);
+	}	
+	
+	public void fill(Graphics g)
+	{
+		super.fill(g);
+		//g.setColor(color);
+	}
+	public 
+}

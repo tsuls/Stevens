@@ -1,0 +1,21 @@
+package bookstore;
+
+public class PaperbackBook extends Book 
+{
+
+	public PaperbackBook(String t, String a, int c, Medium m) 
+	{
+		super(t, a, c, m);
+	}
+
+	@Override
+	public boolean isForSale()
+	{
+		return true;
+	}
+	
+	public String toString()
+	{
+		return super.toString() + ".";
+	}
+}

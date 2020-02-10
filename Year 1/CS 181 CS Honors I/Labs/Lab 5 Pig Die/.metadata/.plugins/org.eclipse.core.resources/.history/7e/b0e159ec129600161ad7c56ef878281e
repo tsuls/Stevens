@@ -1,0 +1,23 @@
+package Stevens.CS181.Lab5;
+
+public class Tester 
+{
+
+	public static void main(String[] args)
+	{
+		Die_C d = new Die_C();
+
+	
+		for(int i = 0 ; i < 30; i ++)
+		{
+			if(i % 10 == 0 && i != 0)
+			{
+				System.out.print("TEN ");
+			}
+			System.outprint(d.roll() + " ");
+			
+		}
+	
+	}
+	
+}

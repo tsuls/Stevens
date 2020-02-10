@@ -1,0 +1,12 @@
+package bookstore;
+
+public class ElectronicBook extends Book 
+{
+	public String theURL;
+	
+	public ElectronicBook(String t, String a, int c, String url) 
+	{
+		super(t, a, c, Medium.Electronic);
+		theURL = url;
+	}
+}

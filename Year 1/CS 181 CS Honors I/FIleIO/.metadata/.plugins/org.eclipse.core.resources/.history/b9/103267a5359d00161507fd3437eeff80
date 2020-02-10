@@ -1,0 +1,23 @@
+import java.io.BufferedReader;
+
+public class LineReader 
+{
+	private BufferedReader bufferedReader;
+	private String fileName;
+	
+	public LineReader(String name)
+	{
+		fileName = name;
+	}
+	
+	public String readLine()
+	{
+		
+	}
+	
+	public void close()
+	{
+		
+	}
+	
+}

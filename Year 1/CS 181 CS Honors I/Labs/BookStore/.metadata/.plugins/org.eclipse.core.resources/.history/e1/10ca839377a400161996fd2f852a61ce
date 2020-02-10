@@ -1,0 +1,26 @@
+package bookstore;
+
+public class PaperbackBook extends Book 
+{
+	//String title, author;
+	Integer cost;
+	
+	public PaperbackBook(String t, String a, Integer c) 
+	{
+		//super();
+		title = t;
+		author = a;
+		cost = c;
+	}
+
+	@Override
+	public boolean isForSale()
+	{
+		return true;
+	}
+	
+	public String toString()
+	{
+		return super.toString() + ".";
+	}
+}

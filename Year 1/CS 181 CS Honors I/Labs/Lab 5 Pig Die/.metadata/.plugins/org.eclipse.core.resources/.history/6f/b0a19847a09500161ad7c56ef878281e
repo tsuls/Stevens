@@ -1,0 +1,14 @@
+package snippet;
+
+public class Snippet {
+	Node nodeTemp = new Node(o);
+			Node nodeCurrent = head;
+		
+				while(nodeCurrent.getNext()  != null)
+				{
+					nodeCurrent = nodeCurrent.getNext();
+				}
+				nodeCurrent.setNext(nodeTemp);
+				incrementCounter();
+}
+

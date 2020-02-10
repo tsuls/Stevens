@@ -1,0 +1,47 @@
+package Stevens.CS181.Lab5;
+
+public class Die_C extends Die
+{
+
+    public static final int MAX = 6;
+
+    private int faceValue;
+    private int rollOne;
+   // private int count;
+
+    //empty constructor, initial value 1
+    public Die_C() 
+    { 
+    	faceValue = 1;
+    	rollOne = 0;
+    	//count = 1;
+    }
+    
+    //roll the die
+    public int roll(int count) 
+    {
+    	//Determine which roll will be a one
+    	if(count == 1) //Only perform this action once every 10 rolls;
+    	{
+    		rollOne = (int)(Math.random() * 10) + 1;
+    		System.out.println("A one will be rolled at: (" + rollOne + ")"); 
+    	}
+    	
+    	System.out.println("Count is: " + count + " " + rollOne);
+
+    	if(count == rollOne) //are we at the roll where 1 will be rolled?
+    	{
+    		faceValue = 1;
+    	}
+    	
+    	else if(count != rollOne) //if not
+    	{
+    		
+    		do
+    		{
+    			faceValue = (int)(Math.random () * MAX) +1;
+    		}while(faceValue == 1); //Don't generate a 1
+    	}
+    	return faceValue;
+    }
+}

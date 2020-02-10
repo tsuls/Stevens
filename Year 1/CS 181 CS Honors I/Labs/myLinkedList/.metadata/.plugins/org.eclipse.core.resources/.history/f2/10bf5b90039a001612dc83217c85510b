@@ -1,0 +1,215 @@
+package myLinkedList;
+public class myLinkedList 
+{
+	 
+	private int counter;
+	private Node head = null;
+	private Node tail = null;
+
+ 
+	// Default constructor
+	public myLinkedList()
+	{
+ 
+	}
+ 
+	// appends the specified element to the end of this list.
+	public void add(Object data) 
+	{
+		tail = new Node(data,null,tail);
+		incrementCounter();
+	}
+ 
+	private int getCounter() 
+	{
+		return counter;
+	}
+ 
+	private void incrementCounter()
+	{
+		counter++;
+	}
+ 
+	private void decrementCounter() 
+	{
+		counter--;
+	}
+ 
+	//  Let's check for null current node before we iterate over it
+	public void add(int index,Object data) //What the FUCK
+	{
+		Node n = head;
+		Node m;
+		int count = 0;
+        
+		while(count != index)
+        {
+            n = n.getNext();
+            count++;
+        }
+		if(n != null)
+		{
+			m = new Node(data,n,n.getPrev());
+			n.setPrev(m);
+		}
+		else if(index == 0)
+		{
+			m = new Node(data, head, null);
+			head = m;
+		}
+		else
+		{
+			add(data);
+		}
+		incrementCounter();
+	}
+ 
+	public Object get(int index)	
+	{
+ 		Node n = head;
+ 		int count = 0;
+ 		
+ 		while(count != index)
+ 		{
+ 			n = n.getNext();
+ 		}
+ 		return n.getData();
+	}
+ 
+	// removes the element at the specified position in this list.
+	public void remove(int index) 
+	{	
+		Node n = head;
+ 		int count = 0;
+ 		
+ 		while(count != index)
+ 		{
+ 			n = n.getNext();
+ 		}
+ 		n.getPrev().setNext(n.getNext());
+ 		n.getNext().setPrev(n.getPrev());
+ 		n = null;
+	}
+	
+	//returns the index for the the data being searched
+	public int indexOf(Object data)
+	{
+		Node n = head;
+		int index = 0;
+		
+		while(n.getData().equals(data) == false)
+		{
+			n = n.getNext();
+			index++;
+		}
+		return index;
+	}
+	
+	//replace an element in the given index
+	public void set(int index,Object data)
+	{
+		Node n = head;
+		int count = 0;
+        
+		while(count != index)
+		{
+			n = n.getNext();
+			count++;
+		}
+		
+		n.setData(data);
+	}
+ 
+	// returns the number of elements in this list.
+	public int size() 
+	{
+		return getCounter();
+	}
+ 
+	public String toString() 
+	{
+		String output = "";
+	
+
+ 
+		if (head != null) {
+			Node nodeCurrent = head.getNext();
+			while (nodeCurrent != null) 
+			{
+				output += "[" + nodeCurrent.getData().toString() + "]";
+				nodeCurrent = nodeCurrent.getNext();
+			}
+		}
+		return output;
+	}
+ 
+	private class Node
+	{
+		// reference to the next node in the chain, or null if there isn't one.
+		private Node next;
+		
+		//prev node in the chain;
+		private Node prev;
+ 
+		// data carried by this node. could be of any type you need.
+		private Object data;
+ 
+		// Node constructor
+		public Node(Object dataValue)
+		{
+			next = null;
+			prev = null;
+			data = dataValue;
+		}
+ 
+		// another Node constructor if we want to specify the node to point to.
+		public Node(Object dataValue, Node nextValue, Node prevValue) 
+		{
+			next = nextValue;
+			prev = prevValue;
+			data = dataValue;
+		}
+ 
+		// these methods should be self-explanatory
+		public Object getData()
+		{
+			return data;
+		}
+ 
+		public void setData(Object dataValue) 
+		{
+			data = dataValue;
+		}
+ 
+		public Node getNext() 
+		{
+			return next;
+		}
+		
+		public Node getPrev()
+		{
+			return prev;
+		}
+ 
+		public void setNext(Node nextValue) 
+		{
+			next = nextValue;
+		}
+		
+		public void setPrev(Node prevValue)
+		{
+			prev = prevValue;
+		}
+		
+		//you don't need this method but its nice to have one to compare Nodes
+		public boolean equals(Node psNode)
+		{
+			if(data.equals(psNode.data))
+			{
+				return true;
+			}
+			return false;
+		}
+ 
+	}
+}

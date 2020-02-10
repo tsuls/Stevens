@@ -1,0 +1,48 @@
+package Lab6;
+
+public class Rational 
+{
+	private long numerator;
+	private long denominator;
+
+	public final String NAME = "Tyler Sulsenti";
+
+	public Rational() 
+	{
+		numerator = 0;
+		denominator = 1;
+	}
+
+	public Rational(long wholeNum)
+	{
+		numerator = wholeNum;
+		denominator = 1;
+	}
+
+	public Rational(long num, long denom)
+	{
+		numerator = num;
+		denominator = denom;
+	}
+
+	public long getDenominator() 
+	{
+		return denominator;
+	}
+
+	public long getNumerator() 
+	{
+
+		return numerator;
+	}
+
+	public String toString()
+	{
+		
+	}
+	
+	private reduceTerms()
+	{
+		
+	}
+}

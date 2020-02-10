@@ -1,0 +1,18 @@
+package bookstore;
+
+public class Book 
+{
+	private String author;
+	private int cost;
+	private Medium medium;
+	private String title;
+	
+	public Book(String a, int c, Medium m, String t)
+	{
+		author = a;
+		cost = c;
+		medium = m;
+		title = t; 
+	}
+	
+}

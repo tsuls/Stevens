@@ -1,0 +1,90 @@
+!SESSION 2016-11-15 11:13:45.320 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-11-15 11:15:23.877
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2016-11-16 14:10:53.043 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-11-16 14:11:01.898
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2016-11-16 18:21:07.303 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-11-16 18:21:16.815
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2016-11-22 09:27:41.791 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-11-22 09:27:58.065
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2016-12-12 16:48:48.718 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-12-12 16:48:59.715
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2016-12-12 17:25:53.058 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2016-12-12 17:26:38.009
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2017-03-09 13:05:04.803 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-03-09 13:05:23.912
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.jobs 4 2 2017-03-09 13:05:36.868
+!MESSAGE An internal error occurred during: "Task List Indexer".
+!STACK 0
+java.lang.NumberFormatException: For input string: "1 (1)"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at org.apache.lucene.index.SegmentInfos.generationFromSegmentsFileName(SegmentInfos.java:226)
+	at org.apache.lucene.index.SegmentInfos.getCurrentSegmentGeneration(SegmentInfos.java:161)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:644)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:593)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:359)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1137)
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:936)
+	at org.eclipse.mylyn.internal.tasks.index.core.TaskListIndex.createIndexWriter(TaskListIndex.java:1272)
+	at org.eclipse.mylyn.internal.tasks.index.core.TaskListIndex.rebuildIndexCompletely(TaskListIndex.java:1221)
+	at org.eclipse.mylyn.internal.tasks.index.core.TaskListIndex.maintainIndex(TaskListIndex.java:1089)
+	at org.eclipse.mylyn.internal.tasks.index.core.TaskListIndex.access$0(TaskListIndex.java:1070)
+	at org.eclipse.mylyn.internal.tasks.index.core.TaskListIndex$MaintainIndexJob.run(TaskListIndex.java:173)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

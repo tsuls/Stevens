@@ -1,0 +1,33 @@
+package Lab4;
+
+public class TesterAf 
+{
+	public static void main(String args[])
+	{
+		int[] arr = {1,2,1,2,3,4,5};
+		Stack test = new Stack(arr);
+		Queue q = new Queue(arr);
+		StackFromQueues sq = new StackFromQueues();
+		
+		q.get();
+		q.enqueue(6);
+		q.get();
+		q.dequeue();
+		q.get();
+		q.dequeue();
+		q.get();
+		q.enqueue(2);
+		q.get();
+		q.dequeue();
+		q.get();
+		q.dequeue();
+		q.dequeue();
+		q.dequeue();
+		q.dequeue();
+		q.dequeue();
+		q.dequeue();
+		q.dequeue();
+		q.get();
+		
+	}
+}

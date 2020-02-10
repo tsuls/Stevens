@@ -1,0 +1,331 @@
+package Lab7;
+
+public class CheckedInteger extends Number implements Comparable<CheckedInteger>
+{
+	protected int value;
+	public final static String NAME = "Tyler Sulsenti";
+	
+	public CheckedInteger()
+	{
+		value = 0;
+	}
+	
+	public CheckedInteger(int v)
+	{
+		value = v;
+	}
+	
+	public CheckedInteger(CheckedInteger i)
+	{
+		value = i.intValue();
+	}
+	
+	/**
+	 * Returns the absolute value of a given function
+	 * 
+	 * @param int v to find its absolute value
+	 * @return A new CheckedInteger representing the absolute value of the given int
+	 * @throws IntegerOverflowException 
+	 */
+	public CheckedInteger abs() throws IntegerOverflowException
+	{
+		int[] operands = {value};
+		
+		if(value == Integer.MIN_VALUE)
+		{
+			throw new IntegerOverflowException(operands, true);
+		}
+		if(value < 0)
+		{
+			return new CheckedInteger((value*-1));
+		}
+		else
+		{
+			return new CheckedInteger(value);
+		}
+	}
+	
+	/**
+	 * Returns a String representation of this instance
+	 * 
+	 * @return  a String representation of this instance
+	 */
+	public String toString()
+	{
+		return value + "";
+	}
+	
+	/**
+	 * Adds the given int to this CheckedInteger
+	 * 
+	 * @param r the value to be added
+	 * @return a new CheckedInteger who is the sum of the given int and this CheckedInteger
+	 * @throws IntegerOverflowException 
+	 */
+	public CheckedInteger add(int r) throws IntegerOverflowException
+	{
+		CheckedInteger result = new CheckedInteger((value + r));
+		int[] operands = {value, r};
+		
+		if(getSign(value) == getSign(r) && !(getSign(value) == getSign(result.intValue())))
+		{				
+			throw new IntegerOverflowException(operands, true);	
+		}
+		else
+		{
+			return result;
+		}		
+	}
+		
+	/**
+	 * Adds the given CheckedInteger to this CheckedInteger
+	 * 
+	 * @param o	The CheckedInteger value to be added
+	 * @return new CheckedInteger who is the sum of the given CheckedInteger and this CheckedInteger
+	 * @throws IntegerOverflowException 
+	 */
+	public CheckedInteger add(CheckedInteger o) throws IntegerOverflowException
+	{
+		if(o == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			CheckedInteger result = new CheckedInteger(value + o.intValue());
+			int[] operands = {value, o.intValue()};
+		
+			if(getSign(value) == getSign(o.intValue()) && !(getSign(value) == getSign(result.intValue())))
+			{				
+				throw new IntegerOverflowException(operands, true);	
+			}
+			else
+			{
+				return result;
+			}
+		}
+	}
+	
+	/**
+	 * negates the value of this CheckedInteger
+	 * 
+	 * @return	a new CheckedInteger with a negated value of this CheckedInteger
+	 * @throws IntegerOverflowException 
+	 */
+	public CheckedInteger negate() throws IntegerOverflowException
+	{
+		int[] operands = {value};
+		
+		if(value == Integer.MIN_VALUE)
+		{
+			throw new IntegerOverflowException(operands, false);
+		}
+		else
+		{
+			return new CheckedInteger((value*-1));
+		}
+	}
+	
+	/**
+	 * Subtracts an int value from this CheckedInteger
+	 * 
+	 * @param r	the value to be subtracted
+	 * @return	a new CheckedInteger with the difference of the given int and this CheckedInteger 
+	 * @throws IntegerOverflowException 
+	 */
+	public CheckedInteger sub(int r) throws IntegerOverflowException
+	{
+		return negate().add(r).negate();
+	}
+	
+	
+	/**
+	 * Subtracts a CheckedInteger value from this CheckedInteger
+	 * 
+	 * @param o	the value to be subtracted
+	 * @return	a new CheckedInteger with the difference of the given CheckedInteger and this CheckedInteger 
+	 * @throws IntegerOverflowException 
+	 */
+	public CheckedInteger sub(CheckedInteger o) throws IntegerOverflowException
+	{
+		if(o == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			return negate().add(o).negate();
+		}
+	}
+	
+	/**
+	 * Multiples an int value with this CheckedInteger
+	 * 
+	 * @param r	the value to multiply
+	 * @return	a new CheckedIntger with the product of the given int and this CheckedInteger.
+	 * @throws IntegerOverflowException 
+	 */
+	public CheckedInteger mul(int r) throws IntegerOverflowException
+	{
+		int[] operands = {value, r};
+		CheckedInteger temp = new CheckedInteger(r);
+		
+		if(value > (Integer.MAX_VALUE / temp.abs().intValue()))
+		{
+			throw new IntegerOverflowException(operands, false);
+		}
+		else
+		{
+			return new CheckedInteger((value * r));
+		}
+	}
+	
+	/**
+	 * Multiples a CheckedInteger value with this CheckedInteger
+	 * 
+	 * @param o	the value to multiply
+	 * @return	a new CheckedIntger with the product of the given CheckedInteger and this CheckedInteger.
+	 * @throws IntegerOverflowException 
+	 */
+	public CheckedInteger mul(CheckedInteger o) throws IntegerOverflowException
+	{
+		if(o == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			int[] operands = {value, o.intValue()};	
+			
+			if(value > (Integer.MAX_VALUE / o.abs().intValue()))
+			{
+				throw new IntegerOverflowException(operands, false);
+			}
+			else
+			{
+				return new CheckedInteger((value * o.intValue()));
+			}
+		}
+	}
+	
+	/**
+	 * Divides an int value with this CheckedInteger
+	 * 
+	 * @param r the value to divide by
+	 * @return a new CheckedInteger with the quotient of the given int and this CheckedInteger
+	 */
+	public CheckedInteger div(int r)
+	{
+		return new CheckedInteger((value/r));
+	}
+	
+	/**
+	 * Divides a CheckedInteger value with this CheckedInteger
+	 * 
+	 * @param o the value to divide by
+	 * @return a new CheckedInteger with the quotient of the given CheckedInteger and this CheckedInteger
+	 */
+	public CheckedInteger div(CheckedInteger o)
+	{
+		if(o == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			return new CheckedInteger((value * o.intValue()));
+		}
+	}
+	
+	/**
+	 * Compares this CheckedInteger with another
+	 * 
+	 * @param o the value to compare with
+	 * @return a positive number if this CheckedInteger is greater, negative if less, zero if the same
+	 */
+	@Override
+	public int compareTo(CheckedInteger o)
+	{
+		if(o == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			if(value > o.intValue())
+			{
+				return 1;
+			}
+			else if (value < o.intValue())
+			{
+				return -1;
+			}
+			else
+			{
+				return 0;
+			}
+		}
+	}
+
+	/**
+	 * returns a double representation of this CheckedInteger
+	 * 
+	 * @return a double representation of this CheckedInteger
+	 */
+	@Override
+	public double doubleValue() 
+	{
+		return (double) value;
+	}
+
+	/**
+	 * returns a float representation of this CheckedInteger
+	 * 
+	 * @return a float representation of this CheckedInteger
+	 */
+	@Override
+	public float floatValue()
+	{
+		return (float) value;
+	}
+
+	/**
+	 * returns an int representation of this CheckedInteger
+	 * 
+	 * @return an int representation of this CheckedInteger
+	 */
+	@Override
+	public int intValue() 
+	{
+		return value;
+	}
+
+	/**
+	 * returns a long representation of this CheckedInteger
+	 * 
+	 * @return a long representation of this CheckedInteger
+	 */
+	@Override
+	public long longValue() 
+	{
+		return (long) value;
+	}
+	
+	/**
+	 * Returns a value whose sign is equal to the sign of the given int
+	 * 
+	 * @param r		value who's sign to determine
+	 * @return	1 if the given int is positive, -1 if it is negative
+	 */
+	private int getSign(int r)
+	{
+		if(r >= 0)
+		{
+			return 1;
+		}
+		else
+		{
+			return -1;
+		}
+	}
+}

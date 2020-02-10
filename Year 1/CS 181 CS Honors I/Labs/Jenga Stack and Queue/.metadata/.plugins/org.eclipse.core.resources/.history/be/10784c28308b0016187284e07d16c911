@@ -1,0 +1,94 @@
+package Lab4;
+
+import java.util.EmptyStackException;
+
+public class Queue 
+{
+	protected static final String NAME = "Tyler Sulsenti";
+	private int[] arr;
+	
+	public Queue ()
+	{
+		arr = new int[0];
+	}
+	
+	public Queue(int[] a)
+	{
+		arr = a;
+	}
+	
+	/**
+     * Returns the current size of the Queue
+     * 
+     * @return   the current size of the Queue
+     */
+	public int size()
+	{
+		return arr.length; //Current Size
+	}
+	
+	/**
+     * Adds an element to the back of the queue
+     * 
+     * @param toAdd		the int to add to the queue
+     */
+	public void enqueue(int toAdd)
+	{
+		int[] temp = new int[size()+1]; //Temporary array to expand the size and allow dynamic growth
+		for(int i = 0; i < size(); i++)
+		{
+			temp[i] = arr[i];
+		}
+		temp[temp.length-1] = toAdd; //Places element at the back of the queue
+		arr = temp;				
+	}
+	
+	/**
+     * Removes the element at the front of the queue
+     * 
+     * @return   the element that was removed
+     */
+	public int dequeue()
+	{
+		if(empty() != false) //Checks if empty
+		{
+			return -1;
+		}
+		int[] temp = new int[size()-1]; //Temporary array to shrink the size and allow dynamic growth
+		int deVal = arr[0];	//Capture the value to be removed
+		for(int i = 1; i < size(); i++)
+		{
+			temp[i-1] = arr[i];
+		}
+		arr = temp;
+		return deVal; //Return it
+	}
+	
+	/**
+     * Determines if the queue is empty
+     * 
+     * @return  throws and EmptyStackException if empty and returns false if the queue is not
+     */
+	public boolean empty()
+	{
+		if(arr.length == 0) //Check the current size of the queue
+		{
+			throw new EmptyStackException(); //If empty
+		}
+		return false;
+	}
+	
+	/**
+     * Shows the element at the front of the queue
+     * 
+     * @return   the element at the front of the queue
+     */
+	public int peek()
+	{
+		empty(); //Check if empty
+		return arr[0]; //Return the element that is in the front of the queue
+	}
+
+
+}
+

@@ -1,0 +1,2 @@
+INDEX VERSION 1.129+D:\Drive\Stevens\CS 181\Labs\Exceptions\.metadata\.plugins\org.eclipse.jdt.core
+2642841289.index

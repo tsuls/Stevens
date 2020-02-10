@@ -1,0 +1,6 @@
+import Book;
+
+public class HardcoverBook extends Book 
+{
+
+}

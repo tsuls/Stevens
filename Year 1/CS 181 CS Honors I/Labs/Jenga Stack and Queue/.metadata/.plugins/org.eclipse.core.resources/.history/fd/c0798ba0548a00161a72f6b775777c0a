@@ -1,0 +1,74 @@
+package Lab4;
+
+import java.util.EmptyStackException;
+
+public class Stack
+{
+	protected static final String NAME = "Tyler Sulsenti";
+	private int[] arr;
+	
+	public Stack()
+	{
+		arr = new int[0];
+	}
+	
+	public Stack(int[] a)
+	{
+		arr = a;
+	}
+	
+	public int size()
+	{
+		return arr.length;
+	}
+	
+	public void push(int toPush)
+	{
+		int[] temp = new int[size()+1];
+		temp[0] = toPush;
+		for(int i = 1; i < temp.length;i++)
+		{
+			temp[i] = arr[i-1];
+		}
+		arr = temp;
+	}
+	
+	public int pop()
+	{
+		if(isEmpty() != false)
+		{
+			return -1;
+		}
+		int[] temp = new int[size()-1];
+		int popVal = arr[0];
+		for(int i = 1; i < size(); i++)
+		{
+			temp[i-1] = arr[i];
+		}
+		arr = temp;
+		return popVal;
+	}
+	
+	public boolean isEmpty()
+	{
+		if(arr.length == 0)
+		{
+			throw new EmptyStackException();
+		}
+		return false;
+	}
+	
+	public int peek()
+	{
+		return arr[0];
+	}
+	
+	public void get()
+	{
+		for(int i = 0; i < arr.length; i++)
+		{
+			System.out.println(arr[i]);
+		}
+	}
+	
+}

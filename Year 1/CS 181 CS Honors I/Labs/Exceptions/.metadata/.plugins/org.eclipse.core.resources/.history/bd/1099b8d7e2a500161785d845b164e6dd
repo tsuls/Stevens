@@ -1,0 +1,15 @@
+package Lab7;
+
+public class test 
+{
+	public static void main(String[] args) throws IntegerOverflowException
+	{
+		CheckedInteger r = new CheckedInteger(3);
+		int d = Integer.MAX_VALUE;
+		int a = Integer.MIN_VALUE;
+		
+		//System.out.println(r.add(d));
+		System.out.println(r.sub(5));
+		
+	}
+}

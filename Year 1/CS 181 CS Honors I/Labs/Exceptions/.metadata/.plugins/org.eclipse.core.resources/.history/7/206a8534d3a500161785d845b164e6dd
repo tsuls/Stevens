@@ -1,0 +1,11 @@
+package Lab7;
+
+public class test 
+{
+	public static void main(String[] args)
+	{
+		int test  = 56;
+		
+		System.out.println((long) test);
+	}
+}

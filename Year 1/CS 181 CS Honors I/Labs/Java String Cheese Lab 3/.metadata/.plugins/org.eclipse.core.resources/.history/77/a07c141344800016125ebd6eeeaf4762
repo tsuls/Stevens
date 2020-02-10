@@ -1,0 +1,197 @@
+/*
+ * Lab03.java
+ *
+ * REPLACE THIS LINE WITH THE PLEDGE
+ * REPLACE THIS LINE WITH YOUR NAME
+ *
+ */
+
+package Lab3; /*DO NOT CHANGE!!!!!!*/
+
+import java.util.ArrayList;
+
+/**
+ * ENTER A BRIEF DESCRIPTION OF WHAT YOUR PROGRAM DOES HERE
+ *
+ * @author Tyler Sulsenti
+ * @version 1.0
+ * @since 20160921
+ * 
+ */
+
+public class Lab03_SulsentiTyler{
+    
+    public static final String NAME = "Tyler Sulsenti";
+
+    /**
+     * Given a binary periodic string, return an double value
+     * Accepts any input ("._" should return 0)
+     * 
+     * @param s  the binay string, in the format of D.A_P
+     * @return   the double value of the binary string
+     */
+    public static double binaryPeriodic(String s)
+    {
+    	return 0.0;
+    }
+    
+   /**
+    * Given a string, find the longest substring fowards and backwards
+    * More details in lab description
+    * Accepts any input (including empty strings)
+    *
+    * @param s1  String 1 to be processed
+    * @param s2  String 2 to be processed
+    * @return    a SPACE deliminated string with 4 values:
+    *            longest substring when both strings forward,
+    *            longest substring s1 backward, longest substring s2 backward
+    *            longest substring both backward.
+    *            Example return is "car car rac rac"
+    */
+    public static String longestSubstring(String s1, String s2)
+    {	
+    	String[] s1Subs = getAllSubs(s1); //Get all possible substrings
+    	String[] s2Subs = getAllSubs(s2);
+    	sortSubsByLen(s1Subs);//sort them by length
+    	sortSubsByLen(s2Subs);
+    	
+    	for(int i = 0; i < s1Subs.length; i++)//compare each substring
+    	{
+    		for(int j = 0; j < s2Subs.length; j++)
+    		{
+    			if(s1Subs[i].equals(s2Subs[j]))
+    			{
+    				return s1Subs[i];
+    			}
+    		}
+    	}
+    	return null;//if none found
+    }
+
+   /**
+    * Computes the intermediate steps of the 3n+1 conjecture
+    * 
+    * @requires n to be a positive, non-zero integer 
+    *      ^^The requires flag tells you what input conditions
+    *        your method requires. So this flag means your method
+    *        does not need to handle negative nums or 0. Yay!
+    *
+    * @param  n  the number to be processed
+    * @return    the string of intermediate steps, seperated by SPACES. 
+    *            The last character of the string, based on the conjecture
+    *            should always be a 1
+    */
+    public static String threeNPlusOne(int n)
+    {
+    	String fin = "";
+    	for(int i = n; i > 1; i++)
+    	{
+    		if(i % 2 != 0 )
+    		{
+    			fin = fin + ((3*i)+1);
+    		}
+    		else
+    		{
+    			fin = fin + (i/2);
+    		}
+    	}
+    }
+    
+    
+    
+    
+    
+    public static boolean inList(ArrayList<String> myList,String check)
+    {
+    	for(int i = 0; i < myList.size();i++)
+    	{
+    		if(check.equals(myList.get(i)))
+    		{
+    			return true;
+    		}
+    	}
+    	return false;
+    }
+    public static String[] getAllSubs(String s)
+    {
+    	ArrayList<String> subs = new ArrayList<String>(); //Easier to work with
+    	for(int i = 0; i < s.length(); i++)
+    	{
+    		if(!inList(subs,s.substring(i,i+1)))//prevents doubles
+    		{
+    			subs.add(s.substring(i,i+1)); //adds each indivdual letter
+    		}
+    	}
+    	for(int i = 0; i < s.length(); i++)
+    	{
+    		if(!inList(subs,s.substring(i)))
+    		{
+    			subs.add(s.substring(i));//add each sub from the front
+    		}
+    	}
+    	for(int i = s.length(); i >= 0; i--)
+    	{
+    		if(!inList(subs,s.substring(0,i)))
+    		{
+    			subs.add(s.substring(0,i));//add each sub from the back
+    		}
+    	}
+    	
+    	String[] sub = new String[subs.size()];//easier to sort
+    	for(int i = 0; i < subs.size(); i++)
+    	{
+    		sub[i] = subs.get(i);//convert to array
+    	}
+    	
+    	return sub;
+    }
+    public static String[] sortSubsByLen(String[] sub)
+    {
+    	for(int i = 1; i < sub.length; i++)//Insertion sort
+    	{
+    		for(int j = i; j > 0; j--)
+    		{
+    			if(sub[j].length() > sub[j-1].length()) //Sort the array into longest to shortest
+    			{
+    				String temp = sub[j];
+    				sub[j] = sub[j-1];
+    				sub[j-1] = temp;
+    			}
+    		}
+    	}
+    	return sub;
+    }
+
+    public static void main(String[] args){
+
+	/* IMPORTANT (NEW FOR THIS LAB 3):
+	 *
+	 * PLEASE COMMENT OUT YOU ENTIRE MAIN FUNCTION BEFORE SUBMITTING. 
+	 * THERE SHOULD ADDITIONALLY BE NO PRINTLN STATEMENTS IN ANY OF THE ABOVE METHODS
+	 *
+	 * This main method is for your testing purpose only. There should
+	 * be NO code in this method that enables the above methods to properly function
+	 *
+	 * Feel free to add additional methods
+	 * Any new methods you create you  MUST also write javadocs
+	 * However, you CANNOT delete or modify any of the given method headers
+	 *
+	 * If you have any questions, please ask a CA for clarification
+	 * 
+	 * Remember that you CANNOT use any java libraries to convert bin->int
+	 * Doing so will result in a 0 on the assignment
+	 *
+	 * You may delete this comment block after you have read it.
+	 * Good Luck, and enjoy your String Cheese!
+	 * 
+	 * 
+	 * 
+	 */
+    	
+    	
+    	
+    	System.out.println(longestSubstring("racecar","carpool"));
+    	
+    }
+    
+}

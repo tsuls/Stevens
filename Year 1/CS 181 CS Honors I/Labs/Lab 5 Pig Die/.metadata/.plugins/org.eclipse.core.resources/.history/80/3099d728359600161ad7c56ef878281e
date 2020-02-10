@@ -1,0 +1,119 @@
+package Stevens.CS181.Lab5;
+
+import java.util.ArrayList;
+
+public class FourDice 
+{
+	private Die d1;
+	private Die d2;
+	private Die d3;
+	private Die_C d4;
+	
+	public FourDice()
+	{
+		d1 = new Die();
+		d2 = new Die();
+		d3 = new Die();
+		d4 = new Die_C(); 
+	}
+	
+	public void roll(int count)
+	{
+		d1.roll();
+		d2.roll();
+		d3.roll();
+		System.out.println("roll d4 is: " + d4.roll(count));
+		
+	}
+	
+	public boolean oneOne()
+	{
+		ArrayList<Die> dieList = createDieList(d1,d2,d3,d4);
+		for(int i = 0; i < dieList.size(); i++)
+		{
+			if(((Die) dieList.get(i)).getFaceValue() == 1)
+			{
+				dieList.remove(i);
+				i--;
+			}
+		}
+		return(dieList.size() == 3);
+	}
+	
+	public boolean twoOnes()
+	{
+		ArrayList<Die> dieList = createDieList(d1,d2,d3,d4);
+		for(int i = 0; i < dieList.size(); i++)
+		{
+			if(((Die) dieList.get(i)).getFaceValue() == 1)
+			{
+				dieList.remove(i);
+				i--;
+			}
+		}
+		return(dieList.size() == 2);
+	}
+	
+	public boolean threeOnes()
+	{
+		ArrayList<Die> dieList = createDieList(d1,d2,d3,d4);
+		for(int i = 0; i < dieList.size(); i++)
+		{
+			if(((Die) dieList.get(i)).getFaceValue() == 1)
+			{
+				dieList.remove(i);
+				i--;
+			}
+		}
+		return(dieList.size() == 1);
+	}
+	
+	
+	public boolean fourOnes()
+	{
+		return (d1.getFaceValue() == 1) & (d2.getFaceValue() == 1) & 
+				(d3.getFaceValue() == 1) & (d4.getFaceValue() == 1);
+	}
+	
+	public int getDiceTotal()
+	{
+		int sum = 0;
+		
+		if(d1.getFaceValue() != 1)
+		{
+			sum += d1.getFaceValue();
+		}
+		
+		if(d2.getFaceValue() != 1)
+		{
+			sum += d2.getFaceValue();
+		}
+		
+		if(d3.getFaceValue() != 1)
+		{
+			sum += d3.getFaceValue();
+		}
+		
+		if(d4.getFaceValue() != 1)
+		{
+			sum += d4.getFaceValue();
+		}
+		
+		return sum;
+	}
+	
+	protected ArrayList<Die> createDieList(Die d1, Die d2, Die d3, Die_C d4)
+	{
+		ArrayList<Die> dieList = new ArrayList<Die>();
+		dieList.add(d1);
+		dieList.add(d2);
+		dieList.add(d3);
+		dieList.add(d4);
+		return dieList;	
+	}
+	
+	 public String toString()
+	 { 
+	    return "(" + d1 + "," + d2 + "," + d3 + "," + d4 + ")"; 
+	 }
+}

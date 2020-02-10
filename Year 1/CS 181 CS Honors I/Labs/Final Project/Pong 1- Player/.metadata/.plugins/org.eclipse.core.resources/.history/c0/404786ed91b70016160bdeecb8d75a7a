@@ -1,0 +1,322 @@
+package breakout;
+
+import javax.swing.*;
+
+import java.awt.*;
+import java.awt.event.*;//for mouse events
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.util.ArrayList;
+
+public class Panel extends JPanel 
+{
+	private Paddle rect;
+	private Ball circle;
+	private Rectangle bounds;
+	
+	private int rX,rY, cX;
+	private int width, height;
+	private int score;
+	private int rowCount;
+	
+	private boolean contain;
+	private boolean isStart;
+	private boolean firstHit;
+	
+	private javax.swing.Timer timer;
+	//private JLabel theLabel;
+	private final int MAXVEL = 6;
+	private int velocity;
+	private int startDir;
+	private final int TARGETCOUNT = 100;
+	
+	private ArrayList<Block> targets;
+	private ArrayList<Life>	 lives;
+	
+	//Ignore pieces that are commented out. They will be dealt with
+	public Panel(Color backGroundColor, int inWidth, int inHeight)
+	{
+		setBackground(backGroundColor);
+		score = 0;
+		startDir = 90;
+		rowCount = 0;
+		
+		//theLabel = new JLabel();
+	    //theLabel.setForeground(Color.WHITE);
+	
+		width = inWidth; //Starting width and height of the panel
+		height = inHeight;
+		
+		rect = new Paddle(173,300,55,5, Color.RED);
+		circle = new Ball(200, rect.getLY() - 50,5,Color.RED);
+		bounds = new Rectangle(0,0,width,height);
+	
+		targets = setTarget(1);
+		lives = setLives();
+		contain = false;
+		isStart = true;
+		firstHit = false;
+		
+		rX = 0; //Involved in the dragging of the rectangle
+		rY = 0;
+		cX = 0;
+		
+		timer = new javax.swing.Timer(5, new MoveListener()); //Involved in the moving of the circle
+		timer.start();
+
+		addMouseListener(new PanelListener());
+		addMouseMotionListener(new PanelMotionListener());
+		addKeyListener(new PanelKeyBoardListener());
+		setFocusable(true);
+	}
+	
+	public void paintComponent (Graphics g)
+	{
+		super.paintComponent(g);
+			
+		//Controls Score Label
+		/*this.add(theLabel,BorderLayout.NORTH);
+		theLabel.setText("Hits:" + score);
+		theLabel.setFont(new Font("Serif", Font.BOLD, 40));*/
+		
+		//Fills in the paddle and ball
+		rect.fill(g);
+		circle.fill(g);
+		
+		//Fills in the target blocks
+		for(int i = 0; i < targets.size(); i++)
+		{
+			targets.get(i).fill(g);
+		}
+
+		//Fills in the Live icons
+		lives.get(0).fill(g);
+		lives.get(1).fill(g);
+		lives.get(2).fill(g);
+	}
+	
+	/**
+	 * Sets the circle. Needs to be edited.
+	 */
+	public void setCircle()
+	{
+	//	circle.setX(width/20);
+	//	circle.setY(getHeight()/2);
+	//	circle.setDirection(startDir);
+	}
+	/**
+	 * Sets the rectangle. Needs to be edited.
+	 */
+	public void setRect()
+	{
+		rect.setLX((int) (getWidth() *.75));
+		rect.setLY((int) (getHeight() * .75));
+	}
+	
+	private ArrayList<Life> setLives()
+	{
+		ArrayList<Life> l = new ArrayList<Life>();
+		
+		int lCX = 20;
+		int count = 0;
+		for(int i = 0; i < 3; i++)
+		{
+			l.add(new Life(lCX, 300, 5, Color.RED));
+			lCX += 20;
+			count ++;
+		}
+		System.out.println(l.size());
+		return l;
+	}
+	
+	/*
+	 * Sets a target array based upon color/layer
+	 */
+	private ArrayList<Block> setTarget(int l)
+	{
+		ArrayList<Block> b = new ArrayList<Block>();
+		
+		int bLX = 0;
+		int bLY = 0;
+		int count = 1;
+		
+		for(int i = 0; i < TARGETCOUNT; i++)
+		{
+			b.add(new Block(bLX,bLY,40,10,l,circle));
+			bLX += 40;
+			if(count % 10 == 0)
+			{
+				bLY += 10;
+				bLX = 0;
+				l++;
+			}
+			count ++;
+		}	
+		return b;
+	}
+
+	
+	/**
+	 *Gets the Mouse input and stores it
+	 */
+	private class PanelListener extends MouseAdapter
+	{
+		public void mousePressed(MouseEvent e)
+		{
+			contain = rect.containsPoint(e.getX(), e.getY());
+			rX = e.getX();
+			rY = e.getY();
+			if(isStart)
+			{
+				cX = e.getX();
+			}
+			repaint();
+		}
+	}
+	
+	/**
+	 * Controls KeyBoard input
+	 */
+	private class PanelKeyBoardListener extends KeyAdapter
+	{
+		public void keyPressed(KeyEvent e)
+		{
+			if(e.getKeyCode() == KeyEvent.VK_SPACE);
+			{
+				if(isStart)
+				{
+					System.out.println("Shoot Ball");
+					isStart = false;
+					circle.setVelocity(2);
+					circle.setDirection(startDir);
+					circle.move();
+				}
+			}
+			
+			//maybe work on arrow key controls?
+			
+			repaint();
+		}	
+	}
+	
+	/**
+	 * Controls the moving of the Paddle
+	 */
+	private class PanelMotionListener extends MouseMotionAdapter
+	{
+		public void mouseDragged(MouseEvent e)
+		{
+			if(contain)
+			{
+				rect.move(e.getX()-rX, 0); //Paddle can only move in X direction
+				rX = e.getX();
+			}
+			if(isStart && contain) //Ball will move with the paddle until it is shot
+			{
+				circle.move(e.getX()-cX, 0);
+				cX = e.getX();
+			}
+			repaint();
+		}
+		
+		/*public void mouseMoved(MouseEvent e)
+		{
+			//if(contain)
+			{
+				rect.move(e.getX()-rX, 0); //Paddle can only move in X direction
+				rX = e.getX();
+			}
+			if(isStart)// && contain) //Ball will move with the paddle until it is shot
+			{
+				circle.move(e.getX()-cX, 0);
+				cX = e.getX();
+			}
+			repaint();
+		}*/
+	}
+	
+	/**
+	 * Controls Collisions and movements for the Paddle and the Ball. 
+	 * MUST be Updated for horizontal Movement & Boundaries.
+	 */
+	private class MoveListener implements ActionListener
+	{
+		public void actionPerformed(ActionEvent a) 
+		{			
+			//All the possible collisions
+			boolean right = circle.getRight() >= getWidth(); //Right of frame
+			boolean left = circle.getLeft() <= 0;			 //Left of frame
+			boolean top = circle.getTop() <= 0;				 //Top of frame
+			boolean bottom = circle.getBottom() >= getHeight();		//Bottom of frame, 
+			
+			/*boolean paddleTop = circle.getBottom() >= rect.getLY() &&//When the ball bounces on top of the paddle
+						circle.getBottom() <= rect.getLY() + rect.getHeight() &&				
+						circle.getCX() >= rect.getLX() &&
+						circle.getCX() <= rect.getWidth() + rect.getLX();*/
+			
+			boolean paddleCol = circle.getBounds().intersects(rect.getBounds());			
+			boolean paddleLeft = circle.getBounds().intersects(rect.getLeftBounds());
+			boolean paddleCenter = circle.getBounds().intersects(rect.getCenterBounds());
+			boolean paddleRight = circle.getBounds().intersects(rect.getRightBounds());
+						
+			
+			//System.out.println(circle.getRight() + "   " +  getWidth() + "   " + circle.getDir() + "   " + firstHit);
+			
+			//These Two if statements control the ball, its movement and collisions 
+			if(!firstHit) //The ball has not hit the paddle for the fist time
+			{
+				if(paddleCol)
+				{	
+					circle.setDirection(45);
+					firstHit = true;
+				}
+			}
+			
+			if(firstHit) // The ball has hit the paddle for the first time
+			{
+				if(right || left || top || bottom || paddleCol) //bottom will be changed
+				{
+					int curDir = circle.getDir();
+					circle.setDirection(curDir + 90);
+				}
+					
+				//Detect Collisions with the target blocks
+				for(int i = 0; i < targets.size(); i++)
+				{
+					if(targets.get(i).getBounds().intersects((circle.getBounds())))
+					{				
+						int curDir = circle.getDir();
+						if(curDir == 225)
+						{
+							circle.setDirection(curDir  - 90);
+						}
+						else
+						{
+							circle.setDirection(curDir + 90);
+						}
+						targets.remove(i); 
+					}
+				}
+
+				if(circle.getDir() >= 360)
+				{
+					circle.setDirection(circle.getDir() - 360);
+				}
+					
+			}
+			
+			//Game is Over
+			if(targets.size() == 0)
+			{
+				System.out.println("GameOver");
+			}
+			
+			//Circle will stay stationary until game is started
+			if(!isStart)
+			{
+				circle.move();
+			}
+			repaint();
+		}
+	}
+} 

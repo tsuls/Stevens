@@ -1,0 +1,40 @@
+package Stevens.CS181.Lab5;
+
+public class FourDice 
+{
+	private Die d1;
+	private Die d2;
+	private Die d3;
+	private Die d4;
+	
+	public FourDice()
+	{
+		d1 = new Die();
+		d2 = new Die();
+		d3 = new Die();
+		d4 = new Die(); 
+	}
+	
+	public void roll()
+	{
+		d1.roll();
+		d2.roll();
+		d3.roll();
+		d4.roll();
+	}
+	
+	public boolean oneOne()
+	{
+		return (d1.getFaceValue() == 1) ^ (d2.getFaceValue() == 1) ^ (d3.getFaceValue() == 1) ^ (d3.getFaceValue() == 1);
+				}
+	
+	public boolean twoOnes()
+	{
+		return (p1.isSnakeEyes())
+	}
+	
+	public boolean fourOnes()
+	{
+		return (p1.isSnakeEyes()) & (p2.isSnakeEyes());
+	}
+}

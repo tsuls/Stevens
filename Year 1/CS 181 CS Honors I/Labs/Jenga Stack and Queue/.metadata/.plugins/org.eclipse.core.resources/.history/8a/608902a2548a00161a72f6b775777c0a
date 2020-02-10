@@ -1,0 +1,50 @@
+package Lab4;
+
+public class Queue 
+{
+	protected static final String NAME = "Tyler Sulsenti";
+	private int[] arr;
+	
+	public Queue ()
+	{
+		arr = new int[0];
+	}
+	
+	public Queue(int[] a)
+	{
+		arr = a;
+	}
+	
+	public int size()
+	{
+		return arr.length;
+	}
+	
+	public void enqueue(int toAdd)
+	{
+		int[] temp = new int[size()+1];
+		for(int i = 0; i < size(); i++)
+		{
+			temp[i] = arr[i];
+		}
+		temp[temp.length-1] = toAdd;
+		arr = temp;				
+	}
+	
+	public int dequeue()
+	{
+		if(isEmpty() != false)
+		{
+			return -1;
+		}
+		int[] temp = new int[size()-1];
+		int deVal = arr[0];
+		for(int i = 1; i < size(); i++)
+		{
+			temp[i-1] = arr[i];
+		}
+		arr = temp;
+		return deVal;
+	}
+	
+}

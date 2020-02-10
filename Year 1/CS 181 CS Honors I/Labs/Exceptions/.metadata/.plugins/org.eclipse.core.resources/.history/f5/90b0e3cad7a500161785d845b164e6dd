@@ -1,0 +1,12 @@
+package Lab7;
+
+public class test 
+{
+	public static void main(String[] args)
+	{
+		CheckedInteger r = new CheckedInteger(3);
+		int d = Integer.MAX_VALUE;
+		
+		System.out.println(r.add(d));
+	}
+}

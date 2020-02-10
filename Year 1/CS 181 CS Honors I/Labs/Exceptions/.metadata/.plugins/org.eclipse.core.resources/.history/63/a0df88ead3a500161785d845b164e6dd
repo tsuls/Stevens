@@ -1,0 +1,29 @@
+package Lab7;
+
+public class IntegerOverflowException extends Exception
+{
+	protected int[] operands;
+	protected boolean operator;
+	
+	/**
+	 * gets the operands variable
+	 * 
+	 * @return operands
+	 */
+	public int[] getOperands()
+	{
+		return operands;
+	}
+	
+	/**
+	 * gets the operator variable 
+	 * 
+	 * @return operator
+	 */
+	public boolean getOperator()
+	{
+		return operator;
+	}
+	
+	public 
+}

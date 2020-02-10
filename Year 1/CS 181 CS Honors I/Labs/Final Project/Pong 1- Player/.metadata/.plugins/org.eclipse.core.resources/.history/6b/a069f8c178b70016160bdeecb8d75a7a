@@ -1,0 +1,79 @@
+package breakout;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class Block extends GameRectangle
+{
+	private int layer;
+	//private Color color;
+	int height, width, lX, lY;
+	
+	public Block(int x, int y, int w, int h, int l) 
+	{
+		super(x, y, w, h, getColorType(l));
+		layer = l;
+	}
+	
+	public void fill(Graphics g)
+	{
+		super.fill(g);
+		g.setColor(Color.BLACK);
+		g.drawRect(super.getLX(), super.getLY(), super.getWidth(), super.getHeight());
+		
+	}
+	
+	public static Color getColorType(int layer)
+	{
+		Color c = Color.WHITE;
+		
+		switch(layer)
+		{
+			case 1:	c = Color.RED;
+					break;
+			
+			case 2:	c = Color.ORANGE;
+				break;
+			
+			case 3:	c = Color.ORANGE;
+				break;
+			
+			case 4:	c = Color.YELLOW;
+				break;
+			
+			case 5:	c = Color.GREEN;
+				break;
+			
+			case 6:	c = Color.CYAN;
+				break;
+			
+			case 7:	c = Color.BLUE;
+				break;
+			
+			case 8:	c = Color.PINK;
+				break;
+			
+			case 9:	c = Color.MAGENTA;
+				break;
+			
+			case 10: c = Color.MAGENTA;		
+		}		
+		return c;
+	}
+	
+	public boolean colDect(Ball ball)
+	{
+
+		if(ball.getTop() <= this.getLY() + this.getHeight() &&
+			ball.getCX() >= this.getLX() &&
+			ball.getCX() <= this.getLX() + this.getWidth())
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+}

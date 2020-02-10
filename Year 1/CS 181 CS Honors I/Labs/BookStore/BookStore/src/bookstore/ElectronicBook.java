@@ -1,0 +1,27 @@
+package bookstore;
+
+public class ElectronicBook extends Book 
+{
+	public final String theURL;
+	
+	public ElectronicBook(String t, String a, int c, String url) 
+	{
+		super(t, a, c, Medium.Electronic);
+		theURL = url;
+	}
+	
+	public String getMedium()
+	{
+		return super.getMedium() + ":{" + theURL + "}";
+	}
+	
+	public boolean isForSale()
+	{
+		return false;
+	}
+	
+	public String toString()
+	{
+		return super.toString() + " from {" + theURL + "}";
+	}
+}

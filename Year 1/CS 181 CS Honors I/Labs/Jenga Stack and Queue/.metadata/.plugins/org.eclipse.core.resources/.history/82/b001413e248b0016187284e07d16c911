@@ -1,0 +1,77 @@
+package Lab4;
+
+import java.util.EmptyStackException;
+
+public class StackFromQueues 
+{
+	protected static final String NAME = "Tyler Sulsenti";
+	Queue qData;
+	Queue qScratch;
+	
+	public StackFromQueues()
+	{
+		qData = new Queue();
+		qScratch = new Queue();
+	}
+	public int size()
+	{
+		return qData.size();
+	}
+	
+	public void push(int toPush)
+	{
+		//System.out.println("qS before purge: ");  qScratch.get();
+		clearQueue(qScratch);
+		//System.out.println("qS after purge: ");  qScratch.get();
+		qScratch.enqueue(toPush);
+		//System.out.println("qS after push, before loop: ");  qScratch.get();
+		//System.out.println("qD after push, before loop: ");  qData.get();
+		for(int i = 0; i < qData.size(); i++)
+		{
+			qScratch.enqueue(qData.dequeue());
+		}
+		//System.out.println("qS after loop: ");  qScratch.get();
+		//System.out.println("qd after loop: ");  qData.get();
+		for(int i = 0; i <= qScratch.size(); i++)
+		{
+			qData.enqueue(qScratch.dequeue());
+		}
+		//System.out.println("qData when done: "); qData.get();
+		//System.out.println("qScratch when done: "); qScratch.get();
+	}
+	
+	public int pop()
+	{
+		empty();
+		return qData.dequeue();
+	}
+	
+	public boolean empty()
+	{
+		if(qData.size() == 0)
+		{
+			throw new EmptyStackException();
+		}
+		return false;
+	}
+	
+	public int peek()
+	{
+		return qData.peek();
+	}
+	
+	public void clearQueue(Queue toClear)
+	{
+		for(int i = 0; i < toClear.size(); i++)
+		{
+			toClear.dequeue();
+		}
+	}
+
+	//
+	public void get()
+	{
+		qData.get();
+	}
+	
+}

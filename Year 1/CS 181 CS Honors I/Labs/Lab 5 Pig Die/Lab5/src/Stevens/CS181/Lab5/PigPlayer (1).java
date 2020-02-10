@@ -1,0 +1,171 @@
+package Stevens.CS181.Lab5;
+
+public abstract class PigPlayer 
+{
+    public static int WINNING_SCORE = 100;
+
+    /** Whether or not to automatically recognize a winning score
+       before the player hand off the dice */
+    public static boolean AUTO_WIN_RECOGNITION_ON = true;
+
+    protected static int numPlayers = 0;
+
+    protected String name;
+    protected DicePair dice;
+
+    /** running score, does not include roundScore till turn is over */
+    protected int score;
+    protected int roundScore;
+
+    protected boolean isPlayerTurn;
+    
+    /** Back reference to owner Pig object */
+    protected Pig owner;
+
+    public PigPlayer(Pig owner, String name) 
+    {
+    	assert(owner != null && name != null);
+
+    	this.owner = owner;
+    	this.name = name;
+    	dice = new DicePair();
+    	score = roundScore = 0;
+    	isPlayerTurn = false;
+	
+    	numPlayers++;
+    }
+
+    public PigPlayer(Pig owner)
+    {   
+    	this(owner, "Player" + numPlayers);  
+    }
+
+    /** reset player's state for a new game */
+    public void reset() 
+    {
+    	dice = new DicePair ();
+    	score = roundScore = 0;
+    	isPlayerTurn = false;
+    }
+
+    public String getName()
+    {  
+    	return name;  
+    }
+
+    /**
+     * Computes the total current score.  This might differ
+     * from score, since roundScore only gets added once the
+     * turn is over.  Since roundScore keeps last round score,
+     * need to check whose turn it is before adding that
+     */
+    public int getCurrentScore() 
+    { 
+    	return  (isPlayerTurn ? (score + roundScore) : score);
+    }
+    
+    public boolean hasWon() 
+    { 	
+    	return (getCurrentScore() >= WINNING_SCORE);  
+    }
+
+    /** 
+     * String representation of this class is the current
+     * total score, along with the current round score
+     * (which could still be lost, in the case the turn
+     * is still on), or the last round score, if it's
+     * the other player's turn
+     */
+    public String toString() 
+    {
+    	return name + "\'s score: \t" + getCurrentScore () + "\t"
+    			+ (isPlayerTurn ? " (this round so far:  " 
+    						: " (last round's score: ")
+    			+ "\t" + roundScore + ")";
+    }   
+		
+    protected void displayGotSnakeEyes() 
+    {   
+    	System.out.println (name + " rolled Snake Eyes!!");
+    	System.out.println ("\t" + name + " looses all points"); 
+    }
+
+    protected void displayGotAOne() 
+    {
+    	System.out.println (name + " rolled a 1!!");
+    	System.out.println ("\t" + name + " looses round points");
+    }
+
+    protected void displayDice() 
+    {
+    	System.out.println(dice);
+    }
+
+    protected void displayDoRoll() 
+    {
+    	owner.displayScores ();
+    	System.out.print(name + " rolls... ");
+    }
+
+    /**
+     * Driver method for one turn of this player.
+     * The turn is over when at least one 1 is rolled, or when the player
+     * relinquishes the dice
+     */
+    public void doTurn()
+    {
+    	roundScore = 0;
+    	isPlayerTurn = true;
+
+    	while (isPlayerTurn)
+    	{
+    		doRoll ();
+	    
+    		// isPlayerTurn will be turned to false when a 1 is rolled
+    		if (isPlayerTurn) 
+    		{
+    			// check whether player wants to hand dice over
+    			isPlayerTurn = !wantsHandOver();
+    		}
+    	}
+    	score += roundScore;
+    }
+
+    /**
+     * This method implements the rules of the Pig game
+     */
+    protected void doRoll()  ///NEEED TO EDIT FOR FOUR DIE//
+    {
+    	displayDoRoll();
+    	dice.roll();
+    	displayDice();
+
+    	if (dice.isSnakeEyes()) 
+    	{
+    		// loose all points on a "snake eyes"
+    		score = roundScore = 0;
+    		isPlayerTurn = false;
+    		displayGotSnakeEyes();
+    	}
+    	else if (dice.hasAOne()) 
+    	{
+    		// loose round points on a single 1
+    		roundScore = 0;
+    		isPlayerTurn = false;
+    		displayGotAOne();
+    	}else
+    	{
+    		roundScore += dice.getDiceTotal();
+	    
+    		if (AUTO_WIN_RECOGNITION_ON && hasWon()) 
+    			// turn is over if user won
+    			isPlayerTurn = false;
+    	}
+    }
+
+    /**
+     * Sub-classes extend this method to implement their 
+     * game playing strategies
+     */
+    abstract protected boolean wantsHandOver();
+}

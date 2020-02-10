@@ -1,0 +1,6 @@
+import bookstore.Book;
+
+public class AudioBook extends Book 
+{
+
+}

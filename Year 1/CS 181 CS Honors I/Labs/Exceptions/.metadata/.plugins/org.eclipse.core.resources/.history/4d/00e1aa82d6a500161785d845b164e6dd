@@ -1,0 +1,12 @@
+package Lab7;
+
+public class test 
+{
+	public static void main(String[] args)
+	{
+		CheckedInteger r = new CheckedIntegr(3);
+		int d = -5;
+		
+		System.out.println(r.add(5));
+	}
+}

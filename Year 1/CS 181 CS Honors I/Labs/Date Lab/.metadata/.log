@@ -1,0 +1,959 @@
+!SESSION 2016-09-13 11:16:33.595 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2016-09-13 11:16:45.546
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jdt.core 4 4 2016-09-13 11:32:42.207
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+/*
+ * Lab02_TylerSulsenti.java
+ *
+ * I Pledge my Honor that i have abided by the Stevens Honor System
+ * Tyler Sulsenti
+ *
+ */
+
+package Lab2;
+
+/**
+ * ENTER A BRIEF DESCRIPTION OF WHAT YOUR PROGRAM DOES HERE
+ *
+ * IN THE LINES BELOW, FILL IN FIELDS WITH APPROPRIATE RESPONSES. DELETE THIS LINE.
+ * @author NAME
+ * @version 1.0
+ * @since YYYYMMDD
+ * 
+ */
+
+/*
+ * Your program can only have ONE class
+ * Change the class declaration line to add_YOURNAME after Lab02.
+ * IMPORTANT: THE DECLARATION LINE MUST BE public class Lab02_yourname{
+ * MAKE SURE YOU KEEP THE BRACKET ON THE SAME LINE AS THE CLASS DECLARATION!!
+ * You may delete this comment block after you read it.
+ */
+public class Lab02_TylerSulsenti
+{
+    
+    public static final String NAME = "Tyler Sulsenti";
+
+    /**
+     * Given a string, in the format of yyyymmdd, extracts the day of the 
+     * week the date falls on
+     *
+     * @param s  the string, in the format of yyyymmdd to be processed
+     * @return   the day of the week, as a String
+     */
+    public static String getDay(String s)
+    {
+    	int date = Integer.parseInt(s);
+    	int w, d, m, y;
+    	int yyyy = Integer.parseInt(s.substring(0,4));
+    	int mm = Integer.parseInt(s.substring(4,6)); 
+    	int dd = Integer.parseInt(s.substring(6));
+    	 	
+    	if(mm >= 3 && mm <= 12)
+    	{
+    		d = dd;
+    		m = mm;
+    		y = yyyy;  		
+    	}
+    	else if(mm >= 1 && mm <= 2)
+    	{
+    		d = dd;
+    		m = mm + 12;
+    		y = yyyy - 1;
+    	}
+    	
+    	w = (d − 1 + (13(𝑀+1)⌋+𝑌+⌊𝑌⌋−⌊𝑌 ⌋+⌊𝑌 ⌋)𝑚𝑜𝑑7
+    }
+
+   /**
+    * Given a string date and a number, computes the day of the week n days 
+    * after (or before) the date given
+    *
+    * @param s  the string, in the format of yyyymmdd to be processed
+    * @param n  the number of days after (or before if negative) 
+    *           the specified date
+    * @return   the new date,as a String in yyyymmdd format
+    */
+    public static String newDate(String s, int n)
+    {
+		return s;
+    	
+    }
+
+   /**
+    * Given two dates, computes the number of days inbetween them.
+    *
+    * @param start  the start date, in the format of yyyymmdd 
+    * @param end    the end date
+    * @return       the number of days between the two dates
+    */
+    public static int daysBetween(String start, String end)
+     {
+		return 0;
+
+    }
+
+    public static void main(String[] args)
+    {
+
+	/* IMPORTANT:
+	 * This main method is for your testing purpose only. There should
+	 * be NO code in this method that enables the above methods to properly function
+	 * You will be graded on if the above 3 methods return the correct 
+	 * values given certain inputs.
+	 * How do you know if you put too much in your main? Ask yourself this:
+	 * "If I comment out my main, will an external program be able to use these 3
+	 *  functions properly?"
+	 * 
+	 * With that being said, feel free to add additional methods
+	 * Adding methods may or may not be helpful
+	 * For any new methods you create you  MUST also write javadocs
+	 * However, you CANNOT delete or modify any of the given method headers
+	 *
+	 * If you have any questions, please ask a CA for clarification
+	 * 
+	 * Remember that you CANNOT use any java date/time processing libraries
+	 * Doing so will result in a 0 on the assignment
+	 *
+	 * You may delete this comment block after you have read it.
+	 * Good Luck, and enjoy your date with Java!
+	 */
+    	
+    	String test ="yyyymmdd";
+    	
+    	System.out.println(test.substring(6));
+    	
+    	
+    }
+    
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2845)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1768)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3231)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1683)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1090)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1714)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2751)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:635)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:195)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2958)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1374)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:270)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:202)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:259)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1082)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:171)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:90)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1247)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:151)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:86)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2016-09-13 11:32:42.213
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2845)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1768)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3231)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1683)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1090)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1714)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2751)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:635)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:195)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2958)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1374)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:270)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:202)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:259)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1082)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:171)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:90)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1247)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:151)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:86)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2016-09-13 11:32:42.214
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2845)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1768)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3231)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1683)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1090)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1714)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2751)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:635)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:195)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2958)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1374)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:270)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:202)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:259)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1082)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:171)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:90)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1247)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:151)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:86)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.jdt.core 4 4 2016-09-13 11:32:44.198
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+/*
+ * Lab02_TylerSulsenti.java
+ *
+ * I Pledge my Honor that i have abided by the Stevens Honor System
+ * Tyler Sulsenti
+ *
+ */
+
+package Lab2;
+
+/**
+ * ENTER A BRIEF DESCRIPTION OF WHAT YOUR PROGRAM DOES HERE
+ *
+ * IN THE LINES BELOW, FILL IN FIELDS WITH APPROPRIATE RESPONSES. DELETE THIS LINE.
+ * @author NAME
+ * @version 1.0
+ * @since YYYYMMDD
+ * 
+ */
+
+/*
+ * Your program can only have ONE class
+ * Change the class declaration line to add_YOURNAME after Lab02.
+ * IMPORTANT: THE DECLARATION LINE MUST BE public class Lab02_yourname{
+ * MAKE SURE YOU KEEP THE BRACKET ON THE SAME LINE AS THE CLASS DECLARATION!!
+ * You may delete this comment block after you read it.
+ */
+public class Lab02_TylerSulsenti
+{
+    
+    public static final String NAME = "Tyler Sulsenti";
+
+    /**
+     * Given a string, in the format of yyyymmdd, extracts the day of the 
+     * week the date falls on
+     *
+     * @param s  the string, in the format of yyyymmdd to be processed
+     * @return   the day of the week, as a String
+     */
+    public static String getDay(String s)
+    {
+    	int date = Integer.parseInt(s);
+    	int w, d, m, y;
+    	int yyyy = Integer.parseInt(s.substring(0,4));
+    	int mm = Integer.parseInt(s.substring(4,6)); 
+    	int dd = Integer.parseInt(s.substring(6));
+    	 	
+    	if(mm >= 3 && mm <= 12)
+    	{
+    		d = dd;
+    		m = mm;
+    		y = yyyy;  		
+    	}
+    	else if(mm >= 1 && mm <= 2)
+    	{
+    		d = dd;
+    		m = mm + 12;
+    		y = yyyy - 1;
+    	}
+    	
+    	w = (d − 1 + (13(𝑀+1)⌋+𝑌+⌊𝑌⌋−⌊𝑌 ⌋+⌊𝑌 ⌋)𝑚𝑜𝑑7
+    }
+
+   /**
+    * Given a string date and a number, computes the day of the week n days 
+    * after (or before) the date given
+    *
+    * @param s  the string, in the format of yyyymmdd to be processed
+    * @param n  the number of days after (or before if negative) 
+    *           the specified date
+    * @return   the new date,as a String in yyyymmdd format
+    */
+    public static String newDate(String s, int n)
+    {
+		return s;
+    	
+    }
+
+   /**
+    * Given two dates, computes the number of days inbetween them.
+    *
+    * @param start  the start date, in the format of yyyymmdd 
+    * @param end    the end date
+    * @return       the number of days between the two dates
+    */
+    public static int daysBetween(String start, String end)
+     {
+		return 0;
+
+    }
+
+    public static void main(String[] args)
+    {
+
+	/* IMPORTANT:
+	 * This main method is for your testing purpose only. There should
+	 * be NO code in this method that enables the above methods to properly function
+	 * You will be graded on if the above 3 methods return the correct 
+	 * values given certain inputs.
+	 * How do you know if you put too much in your main? Ask yourself this:
+	 * "If I comment out my main, will an external program be able to use these 3
+	 *  functions properly?"
+	 * 
+	 * With that being said, feel free to add additional methods
+	 * Adding methods may or may not be helpful
+	 * For any new methods you create you  MUST also write javadocs
+	 * However, you CANNOT delete or modify any of the given method headers
+	 *
+	 * If you have any questions, please ask a CA for clarification
+	 * 
+	 * Remember that you CANNOT use any java date/time processing libraries
+	 * Doing so will result in a 0 on the assignment
+	 *
+	 * You may delete this comment block after you have read it.
+	 * Good Luck, and enjoy your date with Java!
+	 */
+    	
+    	String test ="yyyymmdd";
+    	
+    	System.out.println(test.substring(6));
+    	
+    	
+    }
+    
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2845)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1768)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3231)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1683)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1090)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1714)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2751)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:635)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:195)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2958)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1374)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:292)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1209)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:809)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:537)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:480)
+	at org.eclipse.jdt.ui.SharedASTProvider.getAST(SharedASTProvider.java:128)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:170)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:155)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2016-09-13 11:32:44.199
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2845)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1768)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3231)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1683)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1090)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1714)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2751)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:635)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:195)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2958)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1374)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:292)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1209)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:809)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:537)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:480)
+	at org.eclipse.jdt.ui.SharedASTProvider.getAST(SharedASTProvider.java:128)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:170)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:155)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2016-09-13 11:32:44.201
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2845)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1768)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3231)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1683)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1090)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1714)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2751)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:635)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:195)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2958)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1374)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:292)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1209)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:809)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:537)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:480)
+	at org.eclipse.jdt.ui.SharedASTProvider.getAST(SharedASTProvider.java:128)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:170)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:155)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.jdt.core 4 4 2016-09-13 11:32:59.886
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+/*
+ * Lab02_TylerSulsenti.java
+ *
+ * I Pledge my Honor that i have abided by the Stevens Honor System
+ * Tyler Sulsenti
+ *
+ */
+
+package Lab2;
+
+/**
+ * ENTER A BRIEF DESCRIPTION OF WHAT YOUR PROGRAM DOES HERE
+ *
+ * IN THE LINES BELOW, FILL IN FIELDS WITH APPROPRIATE RESPONSES. DELETE THIS LINE.
+ * @author NAME
+ * @version 1.0
+ * @since YYYYMMDD
+ * 
+ */
+
+/*
+ * Your program can only have ONE class
+ * Change the class declaration line to add_YOURNAME after Lab02.
+ * IMPORTANT: THE DECLARATION LINE MUST BE public class Lab02_yourname{
+ * MAKE SURE YOU KEEP THE BRACKET ON THE SAME LINE AS THE CLASS DECLARATION!!
+ * You may delete this comment block after you read it.
+ */
+public class Lab02_TylerSulsenti
+{
+    
+    public static final String NAME = "Tyler Sulsenti";
+
+    /**
+     * Given a string, in the format of yyyymmdd, extracts the day of the 
+     * week the date falls on
+     *
+     * @param s  the string, in the format of yyyymmdd to be processed
+     * @return   the day of the week, as a String
+     */
+    public static String getDay(String s)
+    {
+    	int date = Integer.parseInt(s);
+    	int w, d, m, y;
+    	int yyyy = Integer.parseInt(s.substring(0,4));
+    	int mm = Integer.parseInt(s.substring(4,6)); 
+    	int dd = Integer.parseInt(s.substring(6));
+    	 	
+    	if(mm >= 3 && mm <= 12)
+    	{
+    		d = dd;
+    		m = mm;
+    		y = yyyy;  		
+    	}
+    	else if(mm >= 1 && mm <= 2)
+    	{
+    		d = dd;
+    		m = mm + 12;
+    		y = yyyy - 1;
+    	}
+    	
+    	w = (d − 1 + (13(𝑀+1)⌋+𝑌+⌊𝑌⌋−⌊𝑌 ⌋+⌊𝑌 ⌋)𝑚𝑜𝑑7
+    }
+
+   /**
+    * Given a string date and a number, computes the day of the week n days 
+    * after (or before) the date given
+    *
+    * @param s  the string, in the format of yyyymmdd to be processed
+    * @param n  the number of days after (or before if negative) 
+    *           the specified date
+    * @return   the new date,as a String in yyyymmdd format
+    */
+    public static String newDate(String s, int n)
+    {
+		return s;
+    	
+    }
+
+   /**
+    * Given two dates, computes the number of days inbetween them.
+    *
+    * @param start  the start date, in the format of yyyymmdd 
+    * @param end    the end date
+    * @return       the number of days between the two dates
+    */
+    public static int daysBetween(String start, String end)
+     {
+		return 0;
+
+    }
+
+    public static void main(String[] args)
+    {
+
+	/* IMPORTANT:
+	 * This main method is for your testing purpose only. There should
+	 * be NO code in this method that enables the above methods to properly function
+	 * You will be graded on if the above 3 methods return the correct 
+	 * values given certain inputs.
+	 * How do you know if you put too much in your main? Ask yourself this:
+	 * "If I comment out my main, will an external program be able to use these 3
+	 *  functions properly?"
+	 * 
+	 * With that being said, feel free to add additional methods
+	 * Adding methods may or may not be helpful
+	 * For any new methods you create you  MUST also write javadocs
+	 * However, you CANNOT delete or modify any of the given method headers
+	 *
+	 * If you have any questions, please ask a CA for clarification
+	 * 
+	 * Remember that you CANNOT use any java date/time processing libraries
+	 * Doing so will result in a 0 on the assignment
+	 *
+	 * You may delete this comment block after you have read it.
+	 * Good Luck, and enjoy your date with Java!
+	 */
+    	
+    	String test ="yyyymmdd";
+    	
+    	System.out.println(test.substring(6));
+    	
+    	
+    }
+    
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2845)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1768)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3231)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1683)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1090)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1714)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2751)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:635)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:195)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2958)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1374)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:270)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:202)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:259)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1082)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:171)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:90)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1247)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:151)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:86)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2016-09-13 11:32:59.888
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2845)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1768)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3231)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1683)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1090)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1714)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2751)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:635)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:195)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2958)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1374)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:270)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:202)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:259)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1082)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:171)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:90)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1247)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:151)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:86)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2016-09-13 11:32:59.890
+!MESSAGE Error in JDT Core during reconcile
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2845)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1768)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3231)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1683)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1090)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1714)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2751)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:635)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:195)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2958)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1374)
+	at org.eclipse.jdt.core.dom.AST.convertCompilationUnit(AST.java:270)
+	at org.eclipse.jdt.internal.core.CompilationUnit.buildStructure(CompilationUnit.java:202)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:259)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.CompilationUnit.makeConsistent(CompilationUnit.java:1082)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.makeConsistent(ReconcileWorkingCopyOperation.java:171)
+	at org.eclipse.jdt.internal.core.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:90)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:729)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:789)
+	at org.eclipse.jdt.internal.core.CompilationUnit.reconcile(CompilationUnit.java:1247)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:126)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.access$0(JavaReconcilingStrategy.java:108)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy$1.run(JavaReconcilingStrategy.java:89)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:87)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconcile(JavaReconcilingStrategy.java:151)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:86)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:104)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.jdt.core 4 4 2016-09-13 11:33:00.874
+!MESSAGE Exception occurred during compilation unit conversion:
+----------------------------------- SOURCE BEGIN -------------------------------------
+/*
+ * Lab02_TylerSulsenti.java
+ *
+ * I Pledge my Honor that i have abided by the Stevens Honor System
+ * Tyler Sulsenti
+ *
+ */
+
+package Lab2;
+
+/**
+ * ENTER A BRIEF DESCRIPTION OF WHAT YOUR PROGRAM DOES HERE
+ *
+ * IN THE LINES BELOW, FILL IN FIELDS WITH APPROPRIATE RESPONSES. DELETE THIS LINE.
+ * @author NAME
+ * @version 1.0
+ * @since YYYYMMDD
+ * 
+ */
+
+/*
+ * Your program can only have ONE class
+ * Change the class declaration line to add_YOURNAME after Lab02.
+ * IMPORTANT: THE DECLARATION LINE MUST BE public class Lab02_yourname{
+ * MAKE SURE YOU KEEP THE BRACKET ON THE SAME LINE AS THE CLASS DECLARATION!!
+ * You may delete this comment block after you read it.
+ */
+public class Lab02_TylerSulsenti
+{
+    
+    public static final String NAME = "Tyler Sulsenti";
+
+    /**
+     * Given a string, in the format of yyyymmdd, extracts the day of the 
+     * week the date falls on
+     *
+     * @param s  the string, in the format of yyyymmdd to be processed
+     * @return   the day of the week, as a String
+     */
+    public static String getDay(String s)
+    {
+    	int date = Integer.parseInt(s);
+    	int w, d, m, y;
+    	int yyyy = Integer.parseInt(s.substring(0,4));
+    	int mm = Integer.parseInt(s.substring(4,6)); 
+    	int dd = Integer.parseInt(s.substring(6));
+    	 	
+    	if(mm >= 3 && mm <= 12)
+    	{
+    		d = dd;
+    		m = mm;
+    		y = yyyy;  		
+    	}
+    	else if(mm >= 1 && mm <= 2)
+    	{
+    		d = dd;
+    		m = mm + 12;
+    		y = yyyy - 1;
+    	}
+    	
+    	w = (d − 1 + (13(𝑀+1)⌋+𝑌+⌊𝑌⌋−⌊𝑌 ⌋+⌊𝑌 ⌋)𝑚𝑜𝑑7
+    }
+
+   /**
+    * Given a string date and a number, computes the day of the week n days 
+    * after (or before) the date given
+    *
+    * @param s  the string, in the format of yyyymmdd to be processed
+    * @param n  the number of days after (or before if negative) 
+    *           the specified date
+    * @return   the new date,as a String in yyyymmdd format
+    */
+    public static String newDate(String s, int n)
+    {
+		return s;
+    	
+    }
+
+   /**
+    * Given two dates, computes the number of days inbetween them.
+    *
+    * @param start  the start date, in the format of yyyymmdd 
+    * @param end    the end date
+    * @return       the number of days between the two dates
+    */
+    public static int daysBetween(String start, String end)
+     {
+		return 0;
+
+    }
+
+    public static void main(String[] args)
+    {
+
+	/* IMPORTANT:
+	 * This main method is for your testing purpose only. There should
+	 * be NO code in this method that enables the above methods to properly function
+	 * You will be graded on if the above 3 methods return the correct 
+	 * values given certain inputs.
+	 * How do you know if you put too much in your main? Ask yourself this:
+	 * "If I comment out my main, will an external program be able to use these 3
+	 *  functions properly?"
+	 * 
+	 * With that being said, feel free to add additional methods
+	 * Adding methods may or may not be helpful
+	 * For any new methods you create you  MUST also write javadocs
+	 * However, you CANNOT delete or modify any of the given method headers
+	 *
+	 * If you have any questions, please ask a CA for clarification
+	 * 
+	 * Remember that you CANNOT use any java date/time processing libraries
+	 * Doing so will result in a 0 on the assignment
+	 *
+	 * You may delete this comment block after you have read it.
+	 * Good Luck, and enjoy your date with Java!
+	 */
+    	
+    	String test ="yyyymmdd";
+    	
+    	System.out.println(test.substring(6));
+    	
+    	
+    }
+    
+}
+
+----------------------------------- SOURCE END -------------------------------------
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2845)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1768)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3231)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1683)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1090)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1714)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2751)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:635)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:195)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2958)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1374)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:292)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1209)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:809)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:537)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:480)
+	at org.eclipse.jdt.ui.SharedASTProvider.getAST(SharedASTProvider.java:128)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:170)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:155)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.jdt.ui 4 2 2016-09-13 11:33:00.876
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jdt.ui".
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2845)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1768)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3231)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1683)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1090)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1714)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2751)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:635)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:195)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2958)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1374)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:292)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1209)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:809)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:537)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:480)
+	at org.eclipse.jdt.ui.SharedASTProvider.getAST(SharedASTProvider.java:128)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:170)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:155)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2016-09-13 11:33:00.878
+!MESSAGE Error in JDT Core during AST creation
+!STACK 0
+java.lang.IllegalArgumentException
+	at org.eclipse.jdt.core.dom.ASTNode.setSourceRange(ASTNode.java:2845)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1243)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1768)
+	at org.eclipse.jdt.core.dom.ASTConverter.convertToParenthesizedExpression(ASTConverter.java:3231)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1683)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1090)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1714)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2751)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:635)
+	at org.eclipse.jdt.core.dom.ASTConverter.buildBodyDeclarations(ASTConverter.java:195)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:2958)
+	at org.eclipse.jdt.core.dom.ASTConverter.convert(ASTConverter.java:1374)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.convert(CompilationUnitResolver.java:292)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1209)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:809)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider$1.run(ASTProvider.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.createAST(ASTProvider.java:537)
+	at org.eclipse.jdt.internal.ui.javaeditor.ASTProvider.getAST(ASTProvider.java:480)
+	at org.eclipse.jdt.ui.SharedASTProvider.getAST(SharedASTProvider.java:128)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:170)
+	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:155)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2016-09-14 11:59:10.490 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2016-09-14 11:59:22.147
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2016-09-14 22:09:18.712 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Tyler/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2016-09-14 22:10:08.026
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.recommenders.rcp 2 12 2016-09-15 00:30:01.380
+!MESSAGE Failed to parse news feed
+!STACK 0
+java.net.UnknownHostException: www.codetrails.com: unknown error
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:102)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:319)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.download(CheckForProjectNewsJob.java:128)
+	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.doRun(CheckForProjectNewsJob.java:92)
+	at org.eclipse.recommenders.internal.rcp.news.CheckForProjectNewsJob.run(CheckForProjectNewsJob.java:65)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
