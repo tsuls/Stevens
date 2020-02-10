@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="04e39d3d-1dbd-4b6b-9795-c464d627b470" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../CS 442 Lab/src/com/lab/example.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/Class/Q6.erl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/Class/b.erl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/Class/ex.beam" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/Class/ex.erl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/Class/guess.erl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/Class/turnstile.erl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/Erlang/HW3/HW3_Sulsenti.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/Erlang/HW3/shipping.erl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/Erlang/HW3/shipping.hrl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__artifacts_cs522_library_unspecified_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_1_2_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__com_android_support_support_annotations_27_1_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_3_0_2_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__com_google_errorprone_error_prone_annotations_2_3_2_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__com_google_guava_failureaccess_1_0_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__com_google_guava_guava_28_1_android_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__com_google_j2objc_j2objc_annotations_1_3_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__org_checkerframework_checker_compat_qual_2_5_5_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__org_codehaus_mojo_animal_sniffer_annotations_1_18_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chat app with Services/Chat-Client-Oneway/app/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Year 2/CS 529 Programming the IOT using iOS/Apple Watch/Apple Watch /AppleWatchExample" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Year 2/CS 529 Programming the IOT using iOS/Apple Watch/Apple Watch /AppleWatchExample" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Year 3/CS 555 Agile/CS-555WS_Daniel_Jacob_Ruchika_Tyler" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Year 3/CS 555 Agile/CS-555WS_Daniel_Jacob_Ruchika_Tyler" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Year 3/CS 555 Agile/Homework06/Original Entire Project (For compliation)/CS-555WS_Daniel_Jacob_Ruchika_Tyler (1)" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Year 3/CS 555 Agile/Homework06/Original Entire Project (For compliation)/CS-555WS_Daniel_Jacob_Ruchika_Tyler (1)" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Year 3/CS 555 Agile/Homework06/Refactored Entire Project (For compliation)/CS555 Local" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Year 3/CS 555 Agile/Homework06/Refactored Entire Project (For compliation)/CS555 Local" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/out/production/CS 511 Concurrent Programming/com/homework/gymSimulation/Client$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/out/production/CS 511 Concurrent Programming/com/homework/gymSimulation/Client$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/out/production/CS 511 Concurrent Programming/com/homework/gymSimulation/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/out/production/CS 511 Concurrent Programming/com/homework/gymSimulation/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/out/production/CS 511 Concurrent Programming/com/homework/gymSimulation/Exercise.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/out/production/CS 511 Concurrent Programming/com/homework/gymSimulation/Exercise.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/out/production/CS 511 Concurrent Programming/com/homework/textswap/TextSwap.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/out/production/CS 511 Concurrent Programming/com/homework/textswap/TextSwap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/src/com/homework/textswap/TextSwap.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CS 511 Concurrent Programming/src/com/homework/textswap/TextSwap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/activities/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/activities/ChatServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/activities/ViewPeerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/activities/ViewPeerActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/activities/ViewPeersActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/activities/ViewPeersActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/async/AsyncContentResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/async/AsyncContentResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/async/QueryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/async/QueryBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/async/SimpleQueryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/async/SimpleQueryBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/contracts/MessageContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/contracts/MessageContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/contracts/PeerContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/contracts/PeerContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/entities/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/entities/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/entities/Peer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/entities/Peer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/managers/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/managers/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/managers/MessageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/managers/MessageManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/managers/PeerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/managers/PeerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/providers/ChatProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/providers/ChatProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/res/menu/chatserver_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/res/menu/chatserver_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chat App with Content Provider/Chat-App-Provider/Chat-Server-Oneway/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../Chat App with Content Provider/Chat-App-Provider/Chat-Server-Oneway/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chat App with Content Provider/Chat-App-Provider/Chat-Server-Oneway/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../Chat App with Content Provider/Chat-App-Provider/Chat-Server-Oneway/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chat App with Content Provider/Chat-App-Provider/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/contracts/MessageContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Chat App with Content Provider/Chat-App-Provider/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/contracts/MessageContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chat App with Content Provider/Chat-App-Provider/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/contracts/PeerContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Chat App with Content Provider/Chat-App-Provider/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/contracts/PeerContract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chat App with Content Provider/Chat-App-Provider/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/entities/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Chat App with Content Provider/Chat-App-Provider/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/entities/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chat App with Database/Chat-App-Database/Chat-Server-Oneway/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../Chat App with Database/Chat-App-Database/Chat-Server-Oneway/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Chat App with Database/Chat-App-Database/Chat-Server-Oneway/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../Chat App with Database/Chat-App-Database/Chat-Server-Oneway/.idea/caches/gradle_models.ser" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/managers/PeerManager.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/activities/ChatServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2820">
+              <caret line="221" lean-forward="true" selection-start-line="221" selection-end-line="221" />
+              <folding>
+                <element signature="e#0#357#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/managers/MessageManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="615">
+              <caret line="59" column="5" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="59" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Chat App With Provider and Managers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chat App With Provider and Managers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chat App With Provider and Managers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chat App With Provider and Managers" type="462c0819:PsiDirectoryNode" />
+              <item name="Chat-Server-Oneway" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chat App With Provider and Managers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chat App With Provider and Managers" type="462c0819:PsiDirectoryNode" />
+              <item name="Chat-Server-Oneway" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chat App With Provider and Managers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chat App With Provider and Managers" type="462c0819:PsiDirectoryNode" />
+              <item name="Chat-Server-Oneway" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chat App With Provider and Managers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chat App With Provider and Managers" type="462c0819:PsiDirectoryNode" />
+              <item name="Chat-Server-Oneway" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chat App With Provider and Managers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chat App With Provider and Managers" type="462c0819:PsiDirectoryNode" />
+              <item name="Chat-Server-Oneway" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chat App With Provider and Managers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chat App With Provider and Managers" type="462c0819:PsiDirectoryNode" />
+              <item name="Chat-Server-Oneway" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chat App With Provider and Managers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chat App With Provider and Managers" type="462c0819:PsiDirectoryNode" />
+              <item name="Chat-Server-Oneway" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+              <item name="stevens" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chat App With Provider and Managers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chat App With Provider and Managers" type="462c0819:PsiDirectoryNode" />
+              <item name="Chat-Server-Oneway" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+              <item name="stevens" type="462c0819:PsiDirectoryNode" />
+              <item name="cs522" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chat App With Provider and Managers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chat App With Provider and Managers" type="462c0819:PsiDirectoryNode" />
+              <item name="Chat-Server-Oneway" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+              <item name="stevens" type="462c0819:PsiDirectoryNode" />
+              <item name="cs522" type="462c0819:PsiDirectoryNode" />
+              <item name="chatserver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chat App With Provider and Managers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chat App With Provider and Managers" type="462c0819:PsiDirectoryNode" />
+              <item name="Chat-Server-Oneway" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+              <item name="stevens" type="462c0819:PsiDirectoryNode" />
+              <item name="cs522" type="462c0819:PsiDirectoryNode" />
+              <item name="chatserver" type="462c0819:PsiDirectoryNode" />
+              <item name="activities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chat App With Provider and Managers" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chat App With Provider and Managers" type="462c0819:PsiDirectoryNode" />
+              <item name="Chat-Server-Oneway" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="edu" type="462c0819:PsiDirectoryNode" />
+              <item name="stevens" type="462c0819:PsiDirectoryNode" />
+              <item name="cs522" type="462c0819:PsiDirectoryNode" />
+              <item name="chatserver" type="462c0819:PsiDirectoryNode" />
+              <item name="managers" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04e39d3d-1dbd-4b6b-9795-c464d627b470" name="Default Changelist" comment="" />
+      <created>1574392868369</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574392868369</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.32971668" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Resources Explorer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Captures" order="0" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Palette&#9;" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/managers/PeerManager.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/managers/MessageManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="59" column="5" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="59" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chat-Server-Oneway/app/src/main/java/edu/stevens/cs522/chatserver/activities/ChatServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2820">
+          <caret line="221" lean-forward="true" selection-start-line="221" selection-end-line="221" />
+          <folding>
+            <element signature="e#0#357#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

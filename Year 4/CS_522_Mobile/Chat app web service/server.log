@@ -1,0 +1,54 @@
+Dec 03, 2019 9:42:21 PM edu.stevens.cs522.chat.webservice.Main info
+INFO: Starting HTTP server...
+Dec 03, 2019 9:42:22 PM org.glassfish.grizzly.http.server.NetworkListener start
+INFO: Started listener bound to [155.246.130.16:8080]
+Dec 03, 2019 9:42:22 PM org.glassfish.grizzly.http.server.HttpServer start
+INFO: [HttpServer] Started.
+Dec 03, 2019 9:42:22 PM edu.stevens.cs522.chat.webservice.Main info
+INFO: Listening at http://155.246.130.16:8080
+Dec 03, 2019 9:42:22 PM edu.stevens.cs522.chat.webservice.Main info
+INFO: Service available at http://155.246.130.16:8080/chat
+Hit enter to stop...
+Dec 03, 2019 11:25:29 PM edu.stevens.cs522.chat.webservice.ChatResource register
+INFO: Received registration request (client=31e29a58-3996-4b19-983d-a9b50db0e25e, username=Ty, timestamp=0, latitude=0, longitude=0)
+Dec 03, 2019 11:25:29 PM edu.stevens.cs522.chat.webservice.ChatResource register
+INFO: Successfully registered user Ty with UUID 31e29a58-3996-4b19-983d-a9b50db0e25e.
+Dec 03, 2019 11:26:06 PM edu.stevens.cs522.chat.webservice.ChatResource register
+INFO: Received registration request (client=31e29a58-3996-4b19-983d-a9b50db0e25e, username=Te, timestamp=0, latitude=0, longitude=0)
+Dec 03, 2019 11:26:06 PM edu.stevens.cs522.chat.webservice.ChatResource register
+WARNING: Failed to add user, already registered? Te
+Dec 03, 2019 11:26:06 PM edu.stevens.cs522.chat.webservice.ChatResource register
+SEVERE: Exception while registering client.
+javax.ws.rs.WebApplicationException: HTTP 409 Conflict
+	at edu.stevens.cs522.chat.webservice.ChatResource.register(ChatResource.java:236)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:124)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:167)
+	at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:176)
+	at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:79)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:469)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:391)
+	at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:80)
+	at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:253)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:232)
+	at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:680)
+	at org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpContainer.service(GrizzlyHttpContainer.java:353)
+	at org.glassfish.grizzly.http.server.HttpHandler$1.run(HttpHandler.java:200)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.doWork(AbstractThreadPool.java:569)
+	at org.glassfish.grizzly.threadpool.AbstractThreadPool$Worker.run(AbstractThreadPool.java:549)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+
+Dec 03, 2019 11:42:33 PM edu.stevens.cs522.chat.webservice.ChatResource ping
+INFO: DEBUG: client 31e29a58-3996-4b19-983d-a9b50db0e25e is registered!
+Dec 04, 2019 9:16:13 AM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
+INFO: Stopped listener bound to [155.246.130.16:8080]
