@@ -1,0 +1,8 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "aa5d39d4370bdbacda565d7d7561c4d5"
+build_time: [1530647345, 23768000]
+inputs:
+  "/Users/Tyler/Google Drive/Stevens/CS 529 iOS/ClientServer/Pods/SwiftSocket/Sources/Result.swift": [1530646788, 0]
+  "/Users/Tyler/Google Drive/Stevens/CS 529 iOS/ClientServer/Pods/SwiftSocket/Sources/Socket.swift": [1530646788, 0]
+  "/Users/Tyler/Google Drive/Stevens/CS 529 iOS/ClientServer/Pods/SwiftSocket/Sources/TCPClient.swift": [1530646788, 0]
+  "/Users/Tyler/Google Drive/Stevens/CS 529 iOS/ClientServer/Pods/SwiftSocket/Sources/UDPClient.swift": [1530646788, 0]

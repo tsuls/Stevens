@@ -1,0 +1,7 @@
+version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
+options: "056c1baf56b060d779a6dee3566bce7c"
+build_time: [1530647357, 869895000]
+inputs:
+  "/Users/Tyler/Google Drive/Stevens/CS 529 iOS/ClientServer/ClientServer/ViewController.swift": !dirty [1530646659, 0]
+  "/Users/Tyler/Google Drive/Stevens/CS 529 iOS/ClientServer/ClientServer/AppDelegate.swift": !dirty [1530646659, 0]
+  "/Users/Tyler/Google Drive/Stevens/CS 529 iOS/ClientServer/ClientServer/main.swift": !dirty [1530646880, 0]
