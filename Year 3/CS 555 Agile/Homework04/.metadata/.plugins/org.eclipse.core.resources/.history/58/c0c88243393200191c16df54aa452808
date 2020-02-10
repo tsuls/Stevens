@@ -1,0 +1,15 @@
+package homework04;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class Homework04 
+{
+	@Test
+	
+	public void tester()
+	{
+		String str = "Junit is working fine";
+		assertEquals("Junit is working fine",str);
+	}
+}

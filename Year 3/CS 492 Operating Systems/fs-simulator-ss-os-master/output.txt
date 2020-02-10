@@ -1,0 +1,319 @@
+line: ./
+line: ./test
+line: ./.git
+line: ./.git/objects
+line: ./.git/objects/50
+line: ./.git/objects/bc
+line: ./.git/objects/ed
+line: ./.git/objects/pack
+line: ./.git/objects/42
+line: ./.git/objects/7b
+line: ./.git/objects/21
+line: ./.git/objects/81
+line: ./.git/objects/2a
+line: ./.git/objects/info
+line: ./.git/objects/e6
+line: ./.git/objects/f9
+line: ./.git/objects/f1
+line: ./.git/objects/2c
+line: ./.git/info
+line: ./.git/logs
+line: ./.git/logs/refs
+line: ./.git/logs/refs/heads
+line: ./.git/logs/refs/remotes
+line: ./.git/logs/refs/remotes/origin
+line: ./.git/hooks
+line: ./.git/refs
+line: ./.git/refs/heads
+line: ./.git/refs/tags
+line: ./.git/refs/remotes
+line: ./.git/refs/remotes/origin
+line: ./.vscode
+line: ./.vscode/ipch
+line: ./.vscode/ipch/93ad5ff851f9da31
+line: ./.vscode/ipch/4af4787d8aac98e4
+line: ./.vscode/ipch/255b1e47ad4349ef
+line: ./.vscode/ipch/d7c35fa28fe610bf
+line: ./.vscode/ipch/aed67c81b2ee508b
+line: ./.vscode/ipch/cc7c0fb6600fd4a9
+line: ./.vscode/ipch/a8f54eb484af141e
+line: ./.vscode/ipch/c3516b03e71121f5
+line: ./.vscode/ipch/e97231ce2a4cc64c
+line: ./.vscode/ipch/2b3b3a8c1c206717
+line: ./.vscode/ipch/cde57faac295ce33
+line: ./.vscode/ipch/d3c81ec47e79e160
+line: ./.vscode/ipch/f6e7b711b8317b58
+line: ./.vscode/ipch/8a87f46388810862
+line: ./.vscode/ipch/70fb70cb6dd670a2
+line: ./.vscode/ipch/fd623cc3f12aa9f2
+line: ./test
+File / Directory already exists
+Start: 0 End: 9999999 usedBit: 0
++: ./
+ +: test/
+ +: .git/
+  +: objects/
+   +: 50/
+   +: bc/
+   +: ed/
+   +: pack/
+   +: 42/
+   +: 7b/
+   +: 21/
+   +: 81/
+   +: 2a/
+   +: info/
+   +: e6/
+   +: f9/
+   +: f1/
+   +: 2c/
+  +: info/
+  +: logs/
+   +: refs/
+    +: heads/
+    +: remotes/
+     +: origin/
+  +: hooks/
+  +: refs/
+   +: heads/
+   +: tags/
+   +: remotes/
+    +: origin/
+ +: .vscode/
+  +: ipch/
+   +: 93ad5ff851f9da31/
+   +: 4af4787d8aac98e4/
+   +: 255b1e47ad4349ef/
+   +: d7c35fa28fe610bf/
+   +: aed67c81b2ee508b/
+   +: cc7c0fb6600fd4a9/
+   +: a8f54eb484af141e/
+   +: c3516b03e71121f5/
+   +: e97231ce2a4cc64c/
+   +: 2b3b3a8c1c206717/
+   +: cde57faac295ce33/
+   +: d3c81ec47e79e160/
+   +: f6e7b711b8317b58/
+   +: 8a87f46388810862/
+   +: 70fb70cb6dd670a2/
+   +: fd623cc3f12aa9f2/
+
+
+
+
+
+
+Not enough memory remaining for: FNode.ipch
+Not enough memory remaining for: DNode.ipch
+Not enough memory remaining for: GNode.ipch
+Not enough memory remaining for: central.ipch
+Not enough memory remaining for: LFile.ipch
+Not enough memory remaining for: LDisk.ipch
+Not enough memory remaining for: FNode.ipch
+Not enough memory remaining for: Tree.ipch
+Not enough memory remaining for: Tree.ipch
+Not enough memory remaining for: LDisk.ipch
+Not enough memory remaining for: LFile.ipch
+Not enough memory remaining for: main.ipch
+Not enough memory remaining for: GNode.ipch
+Not enough memory remaining for: DNode.ipch
+Start: 0 End: 47 usedBit: 1
+Start: 48 End: 14981 usedBit: 1
+Start: 14982 End: 14981 usedBit: 1
+Start: 14982 End: 15107 usedBit: 1
+Start: 15108 End: 26518 usedBit: 1
+Start: 26519 End: 32497 usedBit: 1
+Start: 32498 End: 32535 usedBit: 1
+Start: 32536 End: 45562 usedBit: 1
+Start: 45563 End: 45584 usedBit: 1
+Start: 45585 End: 51716 usedBit: 1
+Start: 51717 End: 51957 usedBit: 1
+Start: 51958 End: 52036 usedBit: 1
+Start: 52037 End: 52052 usedBit: 1
+Start: 52053 End: 52057 usedBit: 1
+Start: 52058 End: 52104 usedBit: 1
+Start: 52105 End: 52178 usedBit: 1
+Start: 52179 End: 52246 usedBit: 1
+Start: 52247 End: 52261 usedBit: 1
+Start: 52262 End: 52273 usedBit: 1
+Start: 52274 End: 52278 usedBit: 1
+Start: 52279 End: 52300 usedBit: 1
+Start: 52301 End: 52319 usedBit: 1
+Start: 52320 End: 52350 usedBit: 1
+Start: 52351 End: 52367 usedBit: 1
+Start: 52368 End: 52436 usedBit: 1
+Start: 52437 End: 52475 usedBit: 1
+Start: 52476 End: 52499 usedBit: 1
+Start: 52500 End: 52525 usedBit: 1
+Start: 52526 End: 52605 usedBit: 1
+Start: 52606 End: 52899 usedBit: 1
+Start: 52900 End: 52900 usedBit: 1
+Start: 52901 End: 52915 usedBit: 1
+Start: 52916 End: 52924 usedBit: 1
+Start: 52925 End: 52933 usedBit: 1
+Start: 52934 End: 52943 usedBit: 1
+Start: 52944 End: 52947 usedBit: 1
+Start: 52948 End: 53003 usedBit: 1
+Start: 53004 End: 53309 usedBit: 1
+Start: 53310 End: 53411 usedBit: 1
+Start: 53412 End: 53440 usedBit: 1
+Start: 53441 End: 53647 usedBit: 1
+Start: 53648 End: 53681 usedBit: 1
+Start: 53682 End: 53774 usedBit: 1
+Start: 53775 End: 53785 usedBit: 1
+Start: 53786 End: 53811 usedBit: 1
+Start: 53812 End: 53895 usedBit: 1
+Start: 53896 End: 54120 usedBit: 1
+Start: 54121 End: 54122 usedBit: 1
+Start: 54123 End: 54124 usedBit: 1
+Start: 54125 End: 54173 usedBit: 1
+Start: 54174 End: 54179 usedBit: 1
+Start: 54180 End: 54272 usedBit: 1
+Start: 54273 End: 6624000 usedBit: 1
+Start: 6624001 End: 6624000 usedBit: 1
+Start: 6624001 End: 6624000 usedBit: 1
+Start: 6624001 End: 6624000 usedBit: 1
+Start: 6624001 End: 6624000 usedBit: 1
+Start: 6624001 End: 6624000 usedBit: 1
+Start: 6624001 End: 6624000 usedBit: 1
+Start: 6624001 End: 6624000 usedBit: 1
+Start: 6624001 End: 6624000 usedBit: 1
+Start: 6624001 End: 6624000 usedBit: 1
+Start: 6624001 End: 6624000 usedBit: 1
+Start: 6624001 End: 6624000 usedBit: 1
+Start: 6624001 End: 6624000 usedBit: 1
+Start: 6624001 End: 6624000 usedBit: 1
+Start: 6624001 End: 6624000 usedBit: 1
+Start: 6624001 End: 6624000 usedBit: 1
+Start: 6624001 End: 6624000 usedBit: 1
+Start: 6624001 End: 6624029 usedBit: 1
+Start: 6624030 End: 6624033 usedBit: 1
+Start: 6624034 End: 6624360 usedBit: 1
+Start: 6624361 End: 6624385 usedBit: 1
+Start: 6624386 End: 6624848 usedBit: 1
+Start: 6624849 End: 6624879 usedBit: 1
+Start: 6624880 End: 9999999 usedBit: 0
++: ./
+ +: test/
+ +: .git/
+  +: objects/
+   +: 50/
+    +: fa1a506e7cb56684d5137d4f23dbcb9a1541ca
+   +: bc/
+    +: 10aa7245c6a84343f20c10d7d3dec72bfe9762
+   +: ed/
+    +: c27abca43a757c9bc20b79c8dbfcdb923b7695
+   +: pack/
+   +: 42/
+    +: aa2132fe5a9fe2df9434a6badf84d3ec268106
+   +: 7b/
+    +: 547fc25afd2fec779fc742a5a882530c7ee9da
+   +: 21/
+    +: 91bc1e467193bee2f3da5db27ee0993b35e2c4
+   +: 81/
+    +: ac0f0ef838b82808ed01847e69498d24b7b600
+   +: 2a/
+    +: 6d1fb70954ca34911e8c350c4665d3beeb32cd
+   +: info/
+   +: e6/
+    +: 3e80024755473b4d26cb41bed775b63ce04c83
+   +: f9/
+    +: bfff437bc49855c9730caea0ca1fa011f52c29
+   +: f1/
+    +: 1fa222fcc85d40ded2895c120248713b3c6785
+   +: 2c/
+    +: d4298f786ebc4b89893ea81a378ed326892fc2
+  +: info/
+   +: exclude
+  +: logs/
+   +: refs/
+    +: heads/
+     +: master
+    +: remotes/
+     +: origin/
+      +: master
+   +: HEAD
+  +: hooks/
+   +: commit-msg.sample
+   +: pre-rebase.sample
+   +: pre-commit.sample
+   +: applypatch-msg.sample
+   +: fsmonitor-watchman.sample
+   +: pre-receive.sample
+   +: prepare-commit-msg.sample
+   +: post-update.sample
+   +: pre-applypatch.sample
+   +: pre-push.sample
+   +: update.sample
+  +: refs/
+   +: heads/
+    +: master
+   +: tags/
+   +: remotes/
+    +: origin/
+     +: master
+  +: config
+  +: HEAD
+  +: description
+  +: index
+  +: FETCH_HEAD
+ +: .vscode/
+  +: ipch/
+   +: 93ad5ff851f9da31/
+    +: main.ipch
+    +: mmap_address.bin
+   +: 4af4787d8aac98e4/
+    +: mmap_address.bin
+   +: 255b1e47ad4349ef/
+    +: mmap_address.bin
+   +: d7c35fa28fe610bf/
+    +: mmap_address.bin
+   +: aed67c81b2ee508b/
+    +: mmap_address.bin
+   +: cc7c0fb6600fd4a9/
+    +: mmap_address.bin
+   +: a8f54eb484af141e/
+    +: mmap_address.bin
+   +: c3516b03e71121f5/
+    +: mmap_address.bin
+   +: e97231ce2a4cc64c/
+    +: mmap_address.bin
+   +: 2b3b3a8c1c206717/
+    +: mmap_address.bin
+   +: cde57faac295ce33/
+    +: mmap_address.bin
+   +: d3c81ec47e79e160/
+    +: mmap_address.bin
+   +: f6e7b711b8317b58/
+    +: mmap_address.bin
+   +: 8a87f46388810862/
+    +: mmap_address.bin
+   +: 70fb70cb6dd670a2/
+    +: mmap_address.bin
+   +: fd623cc3f12aa9f2/
+    +: mmap_address.bin
+  +: settings.json
+ +: small_file_list.txt
+ +: main.o
+ +: file_list.txt/
+ +: LDisk.cpp
+ +: driver
+ +: LFile.o
+ +: Makefile
+ +: Tree.o
+ +: LFile.hpp
+ +: LDisk.o
+ +: Tree.cpp
+ +: README.md
+ +: DNode.hpp
+ +: central.hpp
+ +: LFile.cpp
+ +: Tree.hpp
+ +: dir_list.txt
+ +: GNode.hpp
+ +: test.sh
+ +: main.cpp
+ +: FNode.hpp
+ +: output.txt
+ +: LDisk.hpp
+FileSystem/Shell: 

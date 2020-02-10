@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;CS-555WS_Daniel_Jacob_Ruchika_Tyler/Project/Project/src/Project10&apos;&#x0A;- Original project: &apos;CS-555WS_Daniel_Jacob_Ruchika_Tyler&apos;&#x0A;- Destination element: &apos;CS-555WS_Daniel_Jacob_Ruchika_Tyler/Project/Project/src/Project10&apos;&#x0A;- Original elements:&#x0A;     Project_8.Driver.java&#x0A;     Project_8.Project.java" description="Copy compilation units" destination="/Project\/Project\/src&lt;Project10" element1="/Project\/Project\/src&lt;Project_8{Driver.java" element2="/Project\/Project\/src&lt;Project_8{Project.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1555271952026" units="2" version="1.0"/>
+</session>

@@ -1,0 +1,9 @@
+25750440       16 -rw-r--r--    1 jamesspaniak     staff                16 Apr 28 11:14 .//.DS_Store
+26960881      384 -rw-r--r--    1 jamesspaniak     staff              32 Apr 28 18:40 .//fileSystem/main.o
+26911343        0 -rw-r--r--    1 jamesspaniak     staff                   16 Apr 28 18:48 .//fileSystem/file_list.txt
+26909089        8 -rw-r--r--    1 jamesspaniak     staff                 32 Apr 28 12:07 .//fileSystem/LDisk.cpp
+26960882      280 -rwxr-xr-x    1 jamesspaniak     staff              16 Apr 28 18:40 .//fileSystem/driver
+26948543       48 -rw-r--r--    1 jamesspaniak     staff               48 Apr 28 13:48 .//fileSystem/LFile.o
+26909040        8 -rw-r--r--    1 jamesspaniak     staff                 16 Apr 28 11:58 .//fileSystem/Makefile
+26909040        8 -rw-r--r--    1 jamesspaniak     staff                 160 Apr 28 11:58 .//fileSystem/test/MMOMMM
+26909040        8 -rw-r--r--    1 jamesspaniak     staff                 160 Apr 28 11:58 .//.vscode/ipch/fd623cc3f12aa9f2/MMOMMM

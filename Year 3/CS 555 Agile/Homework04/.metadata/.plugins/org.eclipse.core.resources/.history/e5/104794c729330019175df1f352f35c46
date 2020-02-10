@@ -1,0 +1,15 @@
+package homework04;
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class TestJunit 
+{
+	@Test
+	
+	public void testAdd()
+	{
+		LocalDate curDate = java.time.LocalDate.now();
+		assertEquals("Junit is working fine",str);
+	}
+}
